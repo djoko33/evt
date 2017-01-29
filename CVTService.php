@@ -71,7 +71,6 @@
                     	?>
                     </ul>
                 </li>
-                </li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>

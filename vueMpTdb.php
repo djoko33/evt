@@ -62,9 +62,9 @@ if (isset($_GET['serv'])) {
 			<div class="col-lg-4">   
 				<br> 			
 					<div class="input-daterange input-group" id="datepicker">	    
-					    <input type="text" class="input form-control" data-provide="datepicker" name="debut" value=<?php echo $_SESSION["debut"] ?> data-date-format="yyyy-mm-dd"/>
+					    <input type="text" class="input form-control" data-provide="datepicker" name="debut" value=<?php echo $_SESSION["debut"] ?> data-date-format="yyyy-mm-dd" data-date-language="fr"/>
 					    <span class="input-group-addon">au</span>
-					    <input type="text" class="input form-control" data-provide="datepicker" name="fin" value=<?php echo $_SESSION["fin"] ?> data-date-format="yyyy-mm-dd"/>
+					    <input type="text" class="input form-control" data-provide="datepicker" name="fin" value=<?php echo $_SESSION["fin"] ?> data-date-format="yyyy-mm-dd" data-date-language="fr"/>
 						
 					</div>						
 			</div>
@@ -95,6 +95,7 @@ if (isset($_GET['serv'])) {
 <script src="../assets/bootstrap-table/bootstrap-table.min.js"></script>
 <script src="../assets/js/Chart.bundle.js"></script>
 <script src="../assets/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+<script src="../assets/bootstrap-datepicker/locales/bootstrap-datepicker.fr.min.js"></script>
 <script src="js/evt.js"></script>
 </body>
 

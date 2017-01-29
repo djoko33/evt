@@ -53,7 +53,7 @@ $reponse->closeCursor();?>
 		</div>       	     
 
 		<div class="col-lg-9">   
-			    <h3><b><?php echo $d[0]['code'].'</b> : '.$d[0]['titre'];?></h3>
+			    <h3><?php echo '<b>'.$d[0]['code'].'</b> : '.$d[0]['titre'];?></h3>
 		</div>
 	</div>
  <!-- row -->
@@ -65,7 +65,7 @@ $reponse->closeCursor();?>
 			<button type="button" class="btn btn-default" id="copy">Copier</button>
 		</div>
 		<div class="col-lg-6">
-			<?php echo '<a href="fiches/'.$d[0]['code'].'.doc">';?>Compl&eacute;ments : <span class="glyphicon glyphicon-file "></span>         </a>
+			<?php echo '<a href="fiches/'.$d[0]['code'].'.doc">Compl&eacute;ments : <span class="glyphicon glyphicon-file "></span>         </a>';?>
 		</div>
 	</div>
 	 <!-- row -->

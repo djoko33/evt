@@ -33,9 +33,9 @@ include_once 'header.php';
 			<div class="col-lg-4">   
 				<br> 			
 					<div class="input-daterange input-group" id="datepicker">	    
-					    <input type="text" class="input form-control" data-provide="datepicker" name="debut" value=<?php echo $_SESSION["debut"] ?> data-date-format="yyyy-mm-dd"/>
+					    <input type="text" class="input form-control" data-provide="datepicker" name="debut" value=<?php echo $_SESSION["debut"] ?> data-date-format="yyyy-mm-dd" data-date-language="fr"/>
 					    <span class="input-group-addon">au</span>
-					    <input type="text" class="input form-control" data-provide="datepicker" name="fin" value=<?php echo $_SESSION["fin"] ?> data-date-format="yyyy-mm-dd"/>
+					    <input type="text" class="input form-control" data-provide="datepicker" name="fin" value=<?php echo $_SESSION["fin"] ?> data-date-format="yyyy-mm-dd" data-date-language="fr"/>
 						
 					</div>						
 			</div>
@@ -47,39 +47,42 @@ include_once 'header.php';
 </div>
 <!-- /.row -->
 <br><br>
-	<div class="row">
+<div class="row">
 	    <div class="col-lg-6">
 			<form action="afficheTableConstats.php" method="get" enctype="text/plain">
-			<span class="label label-default">Recherche Terrain</span>
-		    <div class="input-group">
-				
-      			<input type="text" name="keyword" class="form-control" placeholder="mot par mot s&eacute;par&eacute;s par des &">
-      			<span class="input-group-btn">
-        			<button class="btn btn-default" type="submit">Go!</button>
-      			</span>
-
-		
-		</div></form>
+				<span class="label label-default">Recherche Terrain</span>
+			    <div class="input-group">
+					
+	      			<input type="text" name="keyword" class="form-control" placeholder="mot par mot s&eacute;par&eacute;s par des &">
+	      			<span class="input-group-btn">
+	        			<button class="btn btn-default" type="submit">Go!</button>
+	      			</span>
+	      		</div>
+      		</form>		
+		</div>
 		<div class="col-lg-6">
 			
 	    </div>	        	
-</div>
+	</div>
 <!-- /.row -->
 <div class="row">
 	    <div class="col-lg-6">
 			<form action="afficheTableConstats.php" method="get" enctype="text/plain">
-			<span class="label label-default">Recherche PtiREX</span>
-		    <div class="input-group">
-      			<input type="text" name="keywordPtiRex" class="form-control" placeholder="mot par mot s&eacute;par&eacute;s par des &">
-      			<span class="input-group-btn">
-        			<button class="btn btn-default" type="submit">Go!</button>
-      			</span>	
-		</div></form>
+				<span class="label label-default">Recherche PtiREX</span>
+			    <div class="input-group">
+	      			<input type="text" name="keywordPtiRex" class="form-control" placeholder="mot par mot s&eacute;par&eacute;s par des &">
+	      			<span class="input-group-btn">
+	        			<button class="btn btn-default" type="submit">Go!</button>
+	      			</span>	
+	      		</div>
+      		</form>
+		</div>
 		<div class="col-lg-6">
 			
 	    </div>	        	
 </div>
 <!-- /.row -->
+</div>
 <!-- jQuery -->
 <script src="../assets/js/jquery-2.2.3.min.js"></script>
 
@@ -89,6 +92,6 @@ include_once 'header.php';
 <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="../assets/bootstrap-table/bootstrap-table.min.js"></script>
 <script src="../assets/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+<script src="../assets/bootstrap-datepicker/locales/bootstrap-datepicker.fr.min.js"></script>
 </body>
-
 </html>

@@ -17,7 +17,7 @@ include_once 'header.php';
 	    </div>
 	    <div class="col-lg-1">
 	        <p>
-  				<br><a class="link tooltip-link"   data-toggle="tooltip"   data-original-title="D&eacute;tails CVT N&eacute;gatifs" href="<?php echo "afficheTableConstatsServCode.php?serv_conc=".$_GET['serv']."&nature=0&code=EM01"; ?>"><span class="glyphicon glyphicon-list-alt logo-small-red"></span></a>
+  				<br><a class="link tooltip-link"   data-toggle="tooltip"   data-original-title="D&eacute;tails CVT N&eacute;gatifs" href="<?php echo "afficheTableConstats.php?serv_conc=".$_GET['serv']."&nature=0"; ?>"><span class="glyphicon glyphicon-list-alt logo-small-red"></span></a>
 			</p>
 		</div>
 		<div class="col-lg-1">
@@ -33,9 +33,9 @@ include_once 'header.php';
 			<div class="col-lg-4">   
 				<br> 			
 					<div class="input-daterange input-group" id="datepicker">	    
-					    <input type="text" class="input form-control" data-provide="datepicker" name="debut" value=<?php echo $_SESSION["debut"] ?> data-date-format="yyyy-mm-dd"/>
+					    <input type="text" class="input form-control" data-provide="datepicker" name="debut" value=<?php echo $_SESSION["debut"] ?> data-date-format="yyyy-mm-dd" data-date-language="fr"/>
 					    <span class="input-group-addon">au</span>
-					    <input type="text" class="input form-control" data-provide="datepicker" name="fin" value=<?php echo $_SESSION["fin"] ?> data-date-format="yyyy-mm-dd"/>
+					    <input type="text" class="input form-control" data-provide="datepicker" name="fin" value=<?php echo $_SESSION["fin"] ?> data-date-format="yyyy-mm-dd" data-date-language="fr"/>
 						
 					</div>						
 			</div>
@@ -219,6 +219,8 @@ include_once 'header.php';
 <!-- jQuery -->
 <script src="../assets/js/jquery-2.2.3.min.js"></script>
 <script src="../assets/js/Chart.bundle.js"></script>
+<script src="../assets/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+<script src="../assets/bootstrap-datepicker/locales/bootstrap-datepicker.fr.min.js"></script>
 <script src="js/evt.js"></script>
 <script>
 
