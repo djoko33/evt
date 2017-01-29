@@ -1,0 +1,141 @@
+MP Blayais	libellé de risque identifié	libellé de contrôle	Code OCM	prescription de contrôle	Fiche du contrôle	Contributeur DIR	nombre global site	DIR	AUT	CDT	EC	ECE	ING	LOG	MSR	MTE	PPSI	QSPR	S3P	SIR	MRH	MCG	MCOM	
+MP1	"Performance du pilotage globale insuffisante 
+(Efficacité maitrise des risques, pilotage projet, perte de sens des actions, déploiement SMI 2020)"	"2 contrôles sur l'efficacité de la maitrise des risques / réalisation PCI Unité,
+"	MP107	"Contrôle sur le taux de réalisation du PCI Uniré 2016 / Réalisation du PCI 2015 par semestre avec focus sur service Conduite/MP4/MP5,
+"	dans MP1	dir cab	2	2																
+MP1	"Performance du pilotage globale insuffisante 
+(Efficacité maitrise des risques, pilotage projet, perte de sens des actions, déploiement SMI 2020)"	1 contrôle sur l'efficacité du pilotage du SMI (tx de réalisation programme, avancement des actions portants les projets)	MP111	Taux de réalisation des actions portants les projets majeurs (Leadership, Maintenance, Blayais après 2020 à minima)	dans MP1	dir cab	1	1																
+MP1	Manque de maitrise lors du passage à la pérénisation du projet SdIN dans le SMI pour l'aspect usage (aspect données portés par le MP2 et MP6)	2 Contrôle sur le respect des usages au niveau des MP (à préciser par PLU)	MP112	"1 contrôle sur le Bilan annuel des usages du SDIN par chaque MP concernés après chaque revue de SP concernés (resp ASP et responsable de PE): 1 contrôles MP1 (MSI), 3 ctrl MP6 (PRE,MOD,REX), 4ctrl MP2 (1 ACT,1 VPP,1 TEM,1 ADT)
+1 contrôle que le processus de maîtrise de la capitalisation fonctionne dans les services concernés (à minima AUTO, CD, MTE, MSR) -1S-"	dans MP1	"1 ASP 1 MSI (RSIT) -
+1 PLU, 3 SDFP, 4 SD Exp."	13	9	1	1					1	1								
+MP2	Avarie technique majeure (Alternateur, TP, GV, …) due à une défaillance matérielle ou une non-qualité de maintenance ou d'exploitation	Qualité des plannings TEM, fiabilité, ergonomie, utilisation par les acteurs	MP201	respect du planning, pertinence planning (horaire, charge EG2, durée prévue, calage sur le cycle...)	dans MP1	1 SD Exp	11	1	1	2	1	1		1	1	1			2					
+MP2	Avarie technique majeure (Alternateur, TP, GV, …) due à une défaillance matérielle ou une non-qualité de maintenance ou d'exploitation	Prise en compte des priorités du point PERF	MP202	Prise en compte des priorités conformes, respect des délais, qualité des informations fournies au CE et à l'ITEM	dans MP1	1 DDP	1	1																
+MP2	Avarie technique majeure (Alternateur, TP, GV, …) due à une défaillance matérielle ou une non-qualité de maintenance ou d'exploitation	Qualité des Fiches Problèmes émises et traitées par le TEM	MP203	Pertinence, complétude, mise à jour, identification des actions en cours	dans MP1	1 SD Exp	3	1		2														
+MP2	Avarie technique majeure (Alternateur, TP, GV, …) due à une défaillance matérielle ou une non-qualité de maintenance ou d'exploitation	"Elaboration du planning ""cycle"" et prise en compte des activités dimensionnantes dans les services"	MP204	Intégration des contraintes cycles (périodes à risque, stretch,…), lissage de la charge, pertinence vis-à-vis des AT, …	dans MP1		2			1									1					
+MP2	Avarie technique majeure (Alternateur, TP, GV, …) due à une défaillance matérielle ou une non-qualité de maintenance ou d'exploitation	Maintien des performances à PMD (pilotage à 100%) et des RPM	MP205	Optimisation du pilotage au plus près de la PMD	dans MP1		3			1		1	1											
+MP2	Avarie technique majeure (Alternateur, TP, GV, …) due à une défaillance matérielle ou une non-qualité de maintenance ou d'exploitation	"CEF (pilotage, résultats, suivi). 
+Pertinence et traitement des actions définies en RTHP"	MP206	Identification des pertes, pilotage des actions correctives et des investigations, calage des activités en RDT site et suivi de la réalisation, anticipation des besoins de PDR	dans MP1	1 SD Exp	4	1		1		2												
+MP2	Avarie technique majeure (Alternateur, TP, GV, …) due à une défaillance matérielle ou une non-qualité de maintenance ou d'exploitation	Contrôle de la qualité de la préparation des dossiers TEM 	MP207	ADR, demandes de régime, préparation ressources, dossier, rex à l'intervenant…	dans MP1		13		2	1	2	1		1	2	2		2						
+MP2	Avarie technique majeure (Alternateur, TP, GV, …) due à une défaillance matérielle ou une non-qualité de maintenance ou d'exploitation	Contrôle de la qualité et pertinence des AdR transverses sur le TEM	MP208	Pertinence de l'ADR, intégration du REX, sollicitation des métiers, pertinence des parades, partage et portage	dans MP1	 1SD Exp	2	1		1														
+MP2	Avarie technique majeure (Alternateur, TP, GV, …) due à une défaillance matérielle ou une non-qualité de maintenance ou d'exploitation	Qualité de préparation des dossiers RDIF ou identification des activités à traiter en cas d'arrêt fortuit	MP209	Complétude et qualité du dossier (ADR, demande de régime, planning, PDR, infos nécessaires pour intervention en astreinte…)	dans MP1	 1 SD Exp	2	1		1														
+MP2	Avarie technique majeure (Alternateur, TP, GV, …) due à une défaillance matérielle ou une non-qualité de maintenance ou d'exploitation	Contrôler par sondage la qualité du Tableau des menaces Techniques court terme et cycle remonté à la DPN	MP210	Cohérence entre les menaces remontées par les CE, celles remontées par le service CDT dans sa remontée hebdo, les ADR cycles des 4 tranches, les dossiers RDIF et les remontées au Parc	dans MP1	1 DDP	2	1		1														
+MP2	Maîtrise insuffisante des activités de manutention combustible pouvant entraîner une erreur de chargement voire un accident de manutention	"Contrôles évacuation et réceptions de combustible:
+qualité de préparation des dossiers
+Fiabilité du planning  (planning spécifique) "	MP211	Vérification de la qualité des interventions, des dossiers, respect des points d'arrêt. Prise en compte du rex, des risques et parades de l'ADR…	dans MP1		4						2	2										
+MP2	Maîtrise insuffisante des activités de manutention combustible pouvant entraîner une erreur de chargement voire un accident de manutention	"Avant chaque campagne d'arrêt :
+- les opérateurs machine sont formés
+- les prescriptions sont mises en œuvre
+Les Moyens de Manutention sont opérationnels
+-fiches d'observation en situation de travail"	MP212	Contrôle des formations et habilitation. Mise en œuvre des prescritions, des parades de l'ADR. Prise en compte du REX. Vérification de la disponibilité des moyens de manutention et de l'organisation en place pour gérer les aléas.	dans MP1		7						1	4		2								
+MP2	Prolongation d'AT	Prise en compte des actions issues des FIREX NQ 	MP213	Les actions retenues sont pertinences, les échéances sont tenues et les actions sont effectivement réalisées sur le terrain.	dans MP1	1 DDM + 1 SDAT + 1 DDP +1 SD Exp	12	4	1	1	1	1		1	1	1		1						
+MP2	Prolongation d'AT	Contrôle de la mise en œuvre du COPAT ou de l'organisation hors COPAT	MP216	Contrôle de la mise en œuvre du COPAT ou de l'organisation hors COPAT (chasse-neige, coordination maintenance, …)	dans MP1	"
+1DDM + 2 SDAT"	5	3											2					
+MP2	Prolongation d'AT	Implication des prestataires dans la préparation des AT	MP217	Voir plan d'action NQME	dans MP1	1 DDM + 1 SDAT	8	2						2	2	2								
+MP2	Prolongation d'AT	Contrôle de la qualité et de la pertinence des AdR Transverses sur l'AT	MP218	Parmi les points à vérifier, il y a la prise en compte du rex de la campagne et des AT précédents	dans MP1	1 DDM + 2 SDAT	7	3											4					
+MP2	Prolongation d'AT	contrôle de la qualité préparation des dossiers AT (en particulier sur les modules 3 de la VD tr4 pa les métiers MOA	MP219	Contrôle par sondage à réaliser dans les domaines identifiés en difficultés dans chaque service et selon l'AT	dans MP1	1 DDM + 1 SDAT	17	1	2	2	2	2		1	2	2		1	2					
+MP2	Prolongation d'AT	Contrôle de la qualité du renseignement du planning au fil de l'eau (Respect de la charte d'AT)	MP220	Voir fiche de contrôle dans MP1	dans MP1		14		2		2	2		1	2	2		1	2					
+MP2	Prolongation d'AT	Vérifier la mise en œuvre effective des Parades définies dans les ADR et des revues de projet pendant l'arrêt 	MP221	La vérification doit porter sur la mise en œuvre effective sur le terrain en priorité et interroger la connaissance des risques et parades par les intervenants	dans MP1	2 SDAT	20	2	2	4	2	2		1	2	2		1	2					
+MP2	Prolongation d'AT	Contrôle de la qualité de préparation et de réalisation des réunions en phase de préparation et de réalisation des AT (RMFA, RMGP, RDI site, RATSAL, RAT, …)	MP224	La finalité de ce contrôle porte sur l'efficience de ces réunions qui passent par un bon calage des attendus et une préparation adéquate	dans MP1	1 DDM + 3SDAT	12	4	1	2	1			1	1	1			1					
+MP2	"-risque Avarie technique majeure (Alternateur, TP, GV, …) due à une défaillance matérielle ou une non-qualité de maintenance ou d'exploitation
+-risque prologation d'AT
+"	Sécurisation des activités sensibles 	MP225	les parades définies sont concrètement mises en œuvre sur le terrain.	dans MP1	1 DDP	9	1	1	1	1	1		1	1	1		1						
+MP2	Maîtrise insuffisante des activités de manutention combustible pouvant entraîner une erreur de chargement voire un accident de manutention	"Contrôle organisation SN4K/RP pour le contrôle et la signature du dossier de transport (notamment DEMR), la DAE et le courrier d'engagement du site (certificats de contamination).
+"	MP226		dans MP1		7						1	4		2								
+MP2	Ecart de gestion matière	Contrôle de gestion matière et physique sur réceptions K, évacuation ou renouvellement. Les prescriptions de contrôle sont en cours de définition sur la base notamment d'une gamme de contrôle existante à Dampierre.	MP227	 	dans MP1	 	3						1	2										
+MP2	Prolongation d'AT	"Contrôel si le service maître d'ouvrage a la capacité de réalisation de la charge des activités du programme d'un arrêt ; lorsqu'un volume repére par type d'arrêt est identifié, l'éventuel excés de charge est justifié et la capacité reste démontrée"	MP228	la maîtrise de la charge en ressource sensible du programme d'un arrêt	dans MP1		3								1				2					
+MP2	Prolongation d'AT	s'assurer que le calage des PMRQ contrôlés respecte les régles de programmation prescrites dans l'attendu 2 de la règle 3 du noyau dur du management du Pluriannuel. (le préventif des soupapes VVP en 2016)	MP229	L'adhérence aux règles de programmation dans la déclinaison du prescriptif	dans MP1		2								1				1					
+MP3	Départ de feu non maîtrisé conduisant à un impact important sur les installations	Contrôler sur le terrain le respect des exigences liées au domaine incendie	MP301	"Plant tour périodique avec CMSQ, Chargé incendie, OSPP voir correspondant explosion
+"	dans MP1	CMSQ	8	8																
+MP3	Départ de feu non maîtrisé conduisant à un impact important sur les installations	Contrôler le respect des exigences liées aux charges calorifiques	MP302	"Noyau dur DI 122
+"	dans MP1		16		2	2	2	2		2	2	2		2						
+MP3	Départ de feu non maîtrisé conduisant à un impact important sur les installations	Contrôler sur le terrain la gestion au quotidien  de la sectorisation	MP303	"Le référentiel est porté par la consigne de conduite
+"			4			2								2						
+MP3	Départ de feu non maîtrisé conduisant à un impact important sur les installations	Contrôler sur le terrain le respect des exigences liées à la gestion des produits inflammables	MP305	"Contrôle à faire à partir du référentiel de stockage et de chantier
+"	dans MP1		8				2			2	2	2								
+MP3	Départ de feu non maîtrisé conduisant à un impact important sur les installations	Contrôler l'opérabilité du PCOM	MP306	"Il s'agit de vérifier que l'organisation de contrôle d'opérabilité du PCOM est appliquée
+"	dans MP1	"Point à revoir avec PPSI pour
+ voir si on maintien en 2016"	2										2							
+MP3	Dégradation des performances de sûreté ( AAR, NC STE, Lignages, Consignations, EP,...)	Contrôler les exigences relatives aux instructions temporaires	MP310	"Noyau dur DI122
+"			2			2														
+MP3	Dégradation des performances de sûreté ( AAR, NC STE, Lignages, Consignations, EP,...)	Contrôler les exigences relatives aux EP	MP312	"Noyau dur DI 122
+"	dans MP1		15		3	3		3			2	2		2						
+MP3	Dégradation des performances de sûreté ( AAR, NC STE, Lignages, Consignations, EP,...)	Contrôler le respect des exigences relatives aux condamnations administratives	MP313	"Noyau dur DI 122
+"	dans MP1	DDP	7	1		6														
+MP3	Dégradation des performances de sûreté ( AAR, NC STE, Lignages, Consignations, EP,...)	Contrôler le respect des exigences relatives aux consignations	MP314	"Noyau dur DI 122
+"	dans MP1	DDP	14	1	1	6	1	1			1	1	1	1						
+MP3	Dégradation des performances de sûreté ( AAR, NC STE, Lignages, Consignations, EP,...)	Contrôler le respect des exigences liées à la sérénité en salle de commande	MP315	"Noyau dur DI 122
+Support : référentiel simplifié conduite ou "	dans MP1		5			5														
+MP3	Dégradation des performances de sûreté ( AAR, NC STE, Lignages, Consignations, EP,...)	Contrôler les exigences liées aux rondes	MP316	"Noyau dur DI 122
+Support : référentiel simplifié conduite"			5			5														
+MP3	Dégradation des performances de sûreté ( AAR, NC STE, Lignages, Consignations, EP,...)	Contrôler les exigences liées aux COMSAT	MP317	"Noyau dur DI 122
+"	dans MP1	CMSQ	5	1										2	2					
+MP3	Dégradation des performances de sûreté ( AAR, NC STE, Lignages, Consignations, EP,...)	Contrôler les exigences liées au risque FME	MP318	"Noyau dur DI 122
+"	dans MP1	1DDM, 2DDT	21	3			4			6	4	4								
+MP3	Dégradation des performances de sûreté ( AAR, NC STE, Lignages, Consignations, EP,...)	Contrôler le respect des exigences en matière de réglages sensibles	MP320	"Noyau dur DI122
+"		1SDEXP, 1CMSQ	8	2	2	2		2												
+MP3	Dégradation des performances de sûreté ( AAR, NC STE, Lignages, Consignations, EP,...)	Contrôler la prise en compte effective des recommandations du QSPR par les services opérationnels (niveau 3 de la DI 122)	MP321	"Noyau dur DI122
+"	dans MP1	CMSQ	2	2																
+MP3	Mauvaise gestion d'une situation de crise pouvant avoir des conséquences sur les installations et/ou sur l'externe	Contrôle annuel de la traçabilité des formations et exercices PUI dans les CIF	MP322		dans MP1	CMSQ	12	1	1	1		1	1	1	1	1	1	1	1				1	
+MP3	Départ de feu non maîtrisé conduisant à un impact important sur les installations	Contrôler la qualité des FAI hors ZP	MP345	"La qualité et la complétude des informations figurant dans les FAI sont particulièrement à regarder (rex inspections ASN)
+"		"Point à revoir avec PPSI pour
+ voir si on maintien en 2016"	2										2							
+MP3	Dégradation des performances de sûreté ( AAR, NC STE, Lignages, Consignations, EP,...)	Contrôler les exigences associées au contrôle technique	MP349		dans MP1		16		2	2	2	2		2	2	2		2						
+MP3	Dégradation des performances de sûreté ( AAR, NC STE, Lignages, Consignations, EP,...)	Contrôler les exigences relatives au lignage	MP355	Support : référentiel simplifié conduite	dans MP1		5			5														
+MP3	Mauvaise gestion d'une situation de crise pouvant avoir des conséquences sur les installations et/ou sur l'externe	Contrôle de la bonne réalisation des contrôles d'opérabilité des différents PC des et des moyens mobiles utilisés en situation de crise (essais réalisés, exercices et entraînements réalisés conformément au programme…)	MP357	"Le contrôle concerne la bonne réalisation des contrôles et des essais ainsi que la robustesse du pilotage de ces activités
+"	dans MP1		2											2						
+MP3	Dégradation des performances de sûreté ( AAR, NC STE, Lignages, Consignations, EP,...)	Contrôler les exigences relatives à la maîtrise de la réactivité	MP360		dans MP1		25		4	15		4			1	1								
+MP3	Défaut de maîtrise d'une agression des installations , ou de ses conséquences, notamment l'inondation et la perte totale des sources électriques	Contrôle du respect des exigences associées à la gestion de la protection volumétrique	MP362			SDI	3	1		2														
+MP3	Défaut de maîtrise d'une agression des installations , ou de ses conséquences, notamment l'inondation et la perte totale des sources électriques	contrôle sur le respect du processus de traitement des écarts de conformité et sur le respect des délais associés	MP363		dans MP1	SDFMGP	2	2																
+MP3	Situation d'écart réglementaire 	Réaliser des contrôles sur la rédaction des FACR ( DMP/MTI, changement de PdR, autres modifications apportées aux installations ) sur le modèle de celui réalisé suite à décision comité sûreté en 2015	MP364		dans MP1		8		2		2				2	2								
+MP4	Risque d'irradiation (dépassement des limites réglementaires)	sécuriser les accés en zones rouges	MP402		dans MP1	CDMSRP/ SDTEM	3	1		1				1										
+MP4	Risque d'irradiation (dépassement des limites réglementaires)	sécuriser les accés en zones oranges	MP403		dans MP1		1	1																
+MP4	Risque d'irradiation (dépassement des limites réglementaires)	identifier les chantiers à risque d'exposition extrémité	MP404		dans MP1		1											1						
+MP4	Dégradation des conditions radiologiques et déclaration d'évenement radioprotection ou transport	éviter la contamination de convois quittant le site	MP406		dans MP1	SDTEM	2	1						1										
+MP4	Dégradation des conditions radiologiques et déclaration d'évenement radioprotection 	maîtrise de l'exposition interne	MP408		dans MP1	CDMSRP	2	1										1						
+MP4	Dégradation des conditions radiologiques et déclaration d'évenement radioprotection ou transport	maîtriser les matériels dédies ou contaminés (DI82/C3)	 MP411		dans MP1		1											1						
+MP4	faute inexcusable de l'employeur : accident mortel, exposition à l'amiante…	maîtriser les opérations de levage	MP412		dans MP1	CDMSRP/DDM	5	1			1				1	1		1						
+MP4	faute inexcusable de l'employeur : accident mortel, exposition à l'amiante…	maîtriser les opérations de travaux en hauteur	MP414		dans MP1	CDMSRP	7	1	1	1		1		1	1			1						
+MP4	faute inexcusable de l'employeur : accident mortel, exposition à l'amiante…	maîtriser les travaux électriques	MP415		dans MP1		2			1						1								
+MP4	Dégradation des conditions radiologiques et déclaration d'évenement radioprotection 	"maîtrise de la contamination sur les chantiers et des régles de sortie de ""zones"""	MP423		dans MP1	CDMSRP	7	1			1			2	1	1		1						
+MP4	Risque d'irradiation (dépassement des limites réglementaires)	contrôle des demandes d'aménagement chantier et des exigences du RTR	MP427		dans MP1	CDMSRP/DDM	8	2			1			2	1	1		1						
+MP4	perte de l'agrément SIR	"contrôler le respectdes régles relatives aux activitésconfiées par le SIR
+Contrôler la bonne mise en oeuvre de l'ARPE
+Contrôle par sondage de la robustesse de déclinaison de la réglementation"	MP429		dans MP1		8		1			1		1	2	1	1	1						
+MP4	Risque d'irradiation (dépassement des limites réglementaires)	 vérification du traitements des écarts identifiés par QSPR	MP430		dans MP1		1											1						
+MP5	Ecarts aux textes réglementaires et autorisations sur les Déchets	"Contrôle du respect des référentiels sur le terrain
+Contrôle du respect des référentiels et guides internes
+Surveillance rapprochée PGAC"	MP502		dans MP1	DIR : 1 DDT, 1 SDI	4	2						2										
+MP5	Situation d'écart réglementaire 	"Contrôler la rigueur et la traçabilité de la mise en oeuvre des articles de la décision Enviro
+"	"MP505
+"		dans MP1	DIR : 4 SDI, 1 DDT	11	5				3	3											
+MP5	Situation d'écart réglementaire 	"Contrôler par sondage  la robustesse de déclinaison de la réglementation
+"	MP517		dans MP1	DIR : 2 SDI? 1 DDT	12	2		1	1	1	2	1	1	1	1	1						
+MP5	risques d'EIE ou ESE, voire d'écart réglementaire de type déversements accidentels, rejet de FF, rejets hors critères ou hors des voies normales, incendie, explosions etc.	"PCI sur la surveillance des prestataires ou l'exercice de la MOA déléguée à la DIRSO
+"	MP519		dans MP1	DIR: 1 SDI, 1 DDT	5	2						1		1	1							
+MP6	Mise en demeure par l'ASN, élaboration de procès verbaux pour non respect de la réglementation	Prise en compte des exigences AREX (ex : conformité ¨PDR) dans les DRT	MP624		dans MP1	DDT (2) SD FP (2) DDM (1)	10	5					1		2	2								
+MP6	Non identification des menaces techniques sur les tranches	contrôle de l'intégration du prescriptif (programmation et réalisation) en fonction des analyses de fiabilité et du pluriannuel	MP630		dans MP1	DDT(3) SDFP(3)	17	6	1				6		2	2								
+MP6	mise en œuvre des données erronnées sur l'installation et perte la qualification des équipements(aléa téchnique exploitation: rex plaques GV1 tr3)	Contrôles sur la prise en compte du RPMQ. - Contrôle de la qualité de renseignement des équipements: 	MP632		dans MP1	DDM (1), DDT (2), SDFP (2)	19	5	2			2	6		2	2								
+MP7	Adaptation trop lente de nos organisations / non respect des référentiels	Respect de la réglementation en matière d'aménagement et de durée du travail	MP745	 dispositif mis en place pour la maîtrise de la durée du travail et l'élaboration des dérogations, validation par échantillonage, respect de l'accord de 1999 et avenant générique exé/maîtrise (nb de semaines de HA/BA), mise en place de travaux postés et modalités	dans MP1		1														1			
+MP7	Risque de ne pas disposer du personnel compétent et adaptés à nos enjeux /Adaptation trop lente des organisations ne permettant la performance	établissement des cibles emplois conformément aux priorités site et projets métiers / respect des arbitrages réalisés suite à notification effectifs 	MP754	 fixation de cibles emplois, conformité aux prioités sites telles que définies en CRHM, conformité aux projets métiers et noyaux de cohérence lorsqu'ils existent, respect de la notification effectif et embauche	dans MP1	1DDP, 1DDM, 1DDT	3	1													2			
+MP7	Risque de ne pas disposer du personnel compétent et adaptés à nos enjeux	Evaluation des compétences sur le terrain	MP755		dans MP1		13		1	1	1	1	1	1	1	1	1	1	1	1	1			
+MP7	Risque de ne pas disposer du personnel compétent et adaptés à nos enjeux	Fiabilité des compétences sur les activités sensibles	MP756		dans MP1		7		1	1		1		1	1	1					1			
+MP7	Confilits et insatisfaction du personnel	PCI EAP qualitatif à créer	MP757	qualité des indications figurant dans chacune parties de l'EAP	dans MP1		1														1			
+MP8	NQM prestataires	Contrôle interne sur la qualité des programmes de surveillance 	MP801		dans MP1	3SDRPI	10	3	1		1	1		0	1	1	1	1						
+MP8	NQM prestataires	contrôle de la réalisation de la surveillance	MP802		dans MP1	2 SDRPI	13	2	1		1	1		4	1	1	1	1						
+MP8	qualité comptabilité	contrôle de la réalisation du PCICF	MP811		dans MP1	1 DPE	1	1																
+MP8	Non respect de nos budgets contractuels  	contrôle des heures d'attentes	MP813		dans MP1		2															2		
+MP8	risque fraude	contrôle sur la mise à jour des habilitations SI par rapport aux mouvement des agents sur site	MP817		dans MP1		4										3					1		
+MP8	Risque de prêt de main d'œuvre	contrôle sur prêt de main d'œuvre	MP820		dans MP1	 1 SDRPI	10	1	1		1	1	0	1	1	1	1	1	1					
+MP8	mauvaises élaboration des budgets 2016	contrôle sur la qualité de remontée de service (par rapport au cadrage PMT)	MP823		dans MP1	1 DPE	1	1																
+MP8	Non respect de nos budgets contractuels  	contrôle sur les DA émise après la clôture budgetaire de chaque AT (un mois après le couplage)	MP827		dans MP1		1															1		
+							579	106	40	86	33	41	26	54	52	54	16	35	24	1	6	4	1	
+																								
+																								
+																								
+																								
+								DIR	AUT	CDT	EC	ECE	ING	LOG	MSR	MTE	PPSI	QSPR	S3P	SIR	MRH	MCG	MCOM	Total
+							2016	106	40	86	33	41	26	54	52	54	16	35	24	1	6	4	1	579
+							2015	133	45	98	39	40	38	55	61	57	25	65	31	0	13	6	1	707
+							2014	192	54	113	49	45	43	100	78	75	24	88	35	0	30	6	1	933
+							2013	217	68	138	60	60	56	114	95	92	34	126	47	1	23	14	4	1149
+							2012	260	137	200	130	143	96	182	174	176	57	170	69	0	46	47	4	1891

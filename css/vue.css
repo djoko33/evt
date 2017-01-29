@@ -1,0 +1,29 @@
+body {
+      font: 400 11px Helvetica, sans-serif;
+      font-size: 11px;}
+
+table, th, td {
+	text-align:center;
+	font-size: 11px;
+	line-height: 1;
+}
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+    line-height: 0.8;
+}
+
+  .btn{ font-size: 11px;} 
+
+h1 {text-align:center;}
+.logo-small {
+      color: #f4511e;
+      font-size: 50px;}
+.logo-small-red {
+      color: #f4511e;
+      font-size: 50px;}
+.logo-small-green {
+      color: #15fe58;
+      font-size: 50px;}
+      
+.pcigreen {background-color: rgb(80, 158, 47);} 
+.pcired {background-color: rgb(254, 88, 21);}
+.pciorange {background-color: rgb(255, 160, 47);}
