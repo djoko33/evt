@@ -1,7 +1,7 @@
 <?php
 $dsn = 'pgsql:host=localhost;dbname=ptirex;';
 $user = 'postgres';
-$password = 'danielP0508';
+$password = 'postgres';
 
 // Connexion � la base de donn�es
 try

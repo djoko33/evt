@@ -5,6 +5,8 @@
 include('connexionPG.php');
 include('connexionPtirex.php');
 //prepare un tableau accessible � toutes les fonctions permettant d'ajouter les libelles courts
+
+//correspondance code national - code terrain
 $reponse = $bdd->query('SELECT * FROM codification');
 $libCodes=array();
 while ($donnees = $reponse->fetch())
@@ -20,11 +22,11 @@ function convertCode($code) {
 }
 
 
-//fournit la liste ordonn�e des codes pour le site donn� et un sens donn�TOP 10 
+//fournit la liste ordonn�e des codes TOP 10 
 //ex countCodesSite
 function top10() {
 	//global $libCodes;
-	include('connexionPtirex.php');
+	//include('connexionPtirex.php');
 	$result=array();
 	$lstCodes=$ptirex->prepare("SELECT code, COUNT(*) as nb FROM codesfrx WHERE (dateevt BETWEEN ? AND ?) GROUP BY code ORDER BY nb DESC LIMIT 10");
 	$lstCodes->execute(array($_SESSION["debut"], $_SESSION["fin"]));
@@ -35,6 +37,17 @@ function top10() {
 	return $result;
 }
 
+function top10Flot() {
+	include('connexionPtirex.php');
+	$result='var d1 = [';
+	$lstCodes=$ptirex->prepare("SELECT code, COUNT(*) as nb FROM codesfrx WHERE (dateevt BETWEEN ? AND ?) GROUP BY code ORDER BY nb DESC LIMIT 10");
+	$lstCodes->execute(array('2017-01-01', '2017-12-31'));
+	while ($code = $lstCodes->fetch())
+	{
+		$result.='['.$code[0].', '.$code[1].'], ';
+	}
+	return $result.'];';
+}
 
 function countCodeTrim($code) {
 	include('connexionPtirex.php');

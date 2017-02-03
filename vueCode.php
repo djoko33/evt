@@ -102,7 +102,7 @@ $reponse->closeCursor();
 		</div>
 		<div class="col-lg-9">
 			<table id="tableCVT" data-toggle="table" 
-		       	data-url=<?php echo '"../ptirex2/jsonFrx.php?code='.$convert[$_GET['code']]."\"";?>
+		       	data-url=<?php echo '"jsonFrx.php?code='.$convert[$_GET['code']]."\"";?>
 		       	data-toolbar="#toolbar"    
 			    data-search="false"
 			    data-show-refresh="false"
@@ -142,7 +142,7 @@ $reponse->closeCursor();
 		</div>
 		<div class="col-lg-9">
 			<table id="tableCVT" data-toggle="table" 
-		       	data-url=<?php echo '"../ptirex2/jsoncid.php?code='.$convert[$_GET['code']]."\"";?>
+		       	data-url=<?php echo '"jsonCid.php?code='.$convert[$_GET['code']]."\"";?>
 		       	data-toolbar="#toolbar"    
 			    data-search="false"
 			    data-show-refresh="false"

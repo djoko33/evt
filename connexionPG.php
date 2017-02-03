@@ -1,9 +1,9 @@
 <?php
 $dsn = 'pgsql:host=localhost;dbname=terrain;';
 $user = 'postgres';
-$password = 'danielP0508';
+$password = 'postgres';
 
-// Connexion à la base de données
+// Connexion ï¿½ la base de donnï¿½es
 try
 {
 	$bdd = new PDO($dsn, $user, $password);
