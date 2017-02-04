@@ -91,6 +91,26 @@ session_start();
 		<div class="col-lg-2">
 			<button id="importPciFiches" class="btn btn-primary">Import Fiches PCI</button>
 		</div>
+				<div class="col-lg-2">
+					<div class="dropdown">
+  						<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" >
+						    MAJ Fiche PCI
+						    <span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+						  <?php
+						include('../connexionPG.php');
+						$rep = $bdd->prepare('SELECT DISTINCT(code), titre FROM pci_fiches ORDER BY code');
+						$rep->execute();
+						while ($don = $rep->fetch())
+							{											
+									echo '<li><a href="../editTramePci.php?code='.$don['code'].'">'.$don['code'].' : '.$don['titre'].'</a></li>';
+							}		
+						$rep->closeCursor();
+						?>
+					  </ul>
+				</div>
+		</div>
 		<div class="col-lg-4"> 
         			<span class="label label-success" id="resultPci"></span>
         	</div>

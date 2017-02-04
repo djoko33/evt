@@ -8,7 +8,7 @@ $reponse->closeCursor();?>
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Affiche une trame PCI</title>
+        <title>Edite une trame PCI</title>
 	    <script src="../assets/js/jquery-2.2.3.min.js"></script>
 		<script src="../assets/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
 		<script src="../assets/bootstrap/js/bootstrap.min.js"></script>
@@ -75,11 +75,12 @@ $reponse->closeCursor();?>
 		</div>
 	</div>
 <!-- row -->
-</br>
+<br>
 <input type="hidden" name="code" value=<?php echo $_GET['code'];?>>
 <input type="submit" class="btn btn-default" id="submit" value="Sauvegarder">
-</div>
+
 </form>	
+</div>
 
 </body>
 </html>
