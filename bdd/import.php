@@ -1,5 +1,5 @@
 <?php
-include('connexionPG.php');
+include('../connexionPG.php');
 
 $target_dir = "uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
@@ -10,6 +10,7 @@ $importFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 if ($importFileType == "csv")
 {
 	move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
+	//$file =  basename( $_FILES["fileToUpload"]["name"]);
 	$reponse = $bdd->query("DELETE FROM importcvt");
 	
 	$req = $bdd->prepare('INSERT INTO importcvt (

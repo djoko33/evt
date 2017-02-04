@@ -1,12 +1,12 @@
 <?php
-include('connexionPG.php');
-//todo à generer la liste des services
+include('../connexionPG.php');
+//todo ï¿½ generer la liste des services
 $lstServ=array('1_EM', 'AUT', 'CDT', 'EC' , 'ECE', 'ING', 'LOG' ,'MSR' , 'MTE' , 'PPSI', 'QSPR' , 'S3P', 'SIR', 'MRH', 'MCG', 'MCOM');
 //todo changer le chemin de pci.csv vers le repertoire upload
 if (($handle = fopen("pci.csv", "r")) !== FALSE) {
 	while (($data = fgetcsv($handle, 5000, ";")) !== FALSE) {
 		$u = array_map("utf8_encode", $data);
-		// on commence à 1 pour éviter le code dans la premiere colonne
+		// on commence ï¿½ 1 pour ï¿½viter le code dans la premiere colonne
 		for ($i = 1; $i < count($u); $i++)
 		{
 			if ($u[$i]!='') 

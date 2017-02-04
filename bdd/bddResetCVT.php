@@ -1,5 +1,5 @@
 <?php
-include('connexionPG.php');
+include('../connexionPG.php');
 $reponse = $bdd->query("DELETE FROM cvt");
-echo "Données effac&eacute;es";
+echo "Donnï¿½es effac&eacute;es";
 ?>

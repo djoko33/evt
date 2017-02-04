@@ -1,7 +1,7 @@
 <?php
-//injecte dans la table PCI les données nécessaires au TdB
+//injecte dans la table PCI les donnï¿½es nï¿½cessaires au TdB
 include_once 'traitementFn.php';
-include('connexionPG.php');// todo changer le chemin
+include('../connexionPG.php');// todo changer le chemin
 $reponse = $bdd->query("SELECT * FROM importcvt WHERE decouvert LIKE 'PCI%'");
 
 
@@ -26,7 +26,7 @@ $reponse->closeCursor();
 foreach ($sql as $s){
 	$req = $bdd->exec('INSERT INTO pci (reference, emetteur, serv_emet,  class, datecvt) VALUES '.$s);
 }
-//suppression des doublons (même date, même emetteur, même code)
+//suppression des doublons (mï¿½me date, mï¿½me emetteur, mï¿½me code)
 $req = $bdd->exec('DELETE FROM pci AS t1 WHERE t1.reference < ANY (SELECT reference FROM pci as t2 WHERE t1.reference<>t2.reference
 		AND   t1.emetteur = t2.emetteur
 		AND   t1.serv_emet = t2.serv_emet

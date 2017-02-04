@@ -1,5 +1,5 @@
 <?php
-include('connexionPG.php');
+include('../connexionPG.php');
 $deb=$_POST['dateDebut'];
 $fin=$_POST['dateFin'];
 $reponse = $bdd->prepare("UPDATE options SET value = ? WHERE id = ?");

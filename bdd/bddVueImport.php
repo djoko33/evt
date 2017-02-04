@@ -29,7 +29,7 @@
 <h1>Mise &agrave; jour des donn&eacute;es</h1><br>
 <p id="result">
 <?php
-include('connexionPG.php');
+include('../connexionPG.php');
 include 'import.php';
 ?></p>
 <p></p>

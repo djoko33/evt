@@ -1,5 +1,5 @@
 <?php
-include('connexionPG.php');
+include('../connexionPG.php');
 //on vide la table
 $reponse = $bdd->query("DELETE FROM codescvt");
 //traitement codes

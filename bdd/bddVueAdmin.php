@@ -82,6 +82,22 @@ session_start();
 		</div>
 	
 </div>
+<h2>Mise &agrave; jour du pci</h2><br>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-2">
+			<button id="ImportPciCible" class="btn btn-primary">Import Cibles PCI</button>
+		</div>
+		<div class="col-lg-2">
+			<button id="ImportPciFiches" class="btn btn-primary">Import Fiches PCI</button>
+		</div>
+		<div class="col-lg-4"> 
+        			<span class="label label-success" id="resultPci"></span>
+        	</div>
+	</div>
+</div>
+
+
 <script type="text/javascript">
 
 	$(document).ready(function(){
@@ -117,6 +133,27 @@ session_start();
 		
 		});
 	});
+	$(document).ready(function(){
+        $('#importPciCible').click(function(){
+            $.ajax({
+                type: 'POST',
+                url: 'importPciCible.php',
+                success: function(data) {
+                    $('#resultPci').text(data);  }
+            });
+   		});
+	});
+	$(document).ready(function(){
+        $('#importPciFiches').click(function(){
+            $.ajax({
+                type: 'POST',
+                url: 'importPciFiches.php',
+                success: function(data) {
+                    $('#resultPci').text(data);  }
+            });
+   		});
+	});
+	
 </script>
 </body>
 </html>
