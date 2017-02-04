@@ -37,7 +37,7 @@ include 'import.php';
 <div class="container">
 	<div class="row">
 		<div class="col-lg-2">
-			<a href="bddVueAdmin.php" class="btn btn-default" role="button">Retour Admin</a>
+			<a href="vueAdmin.php" class="btn btn-default" role="button">Retour Admin</a>
 
 		</div>
 		<div class="col-lg-2">

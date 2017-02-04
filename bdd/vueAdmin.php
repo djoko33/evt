@@ -23,7 +23,7 @@ session_start();
 <h2>Mise &agrave; jour des bases</h2><br>
 <div class="container">
 	<div class="row">
-		<form action="bddVueimport.php" method="post" enctype="multipart/form-data">
+		<form action="vueImport.php" method="post" enctype="multipart/form-data">
 		    <label class="btn btn-primary" for="fileToUpload">
 		    	<input type="file" name="fileToUpload" class="btn btn-default btn-sm" id="fileToUpload" style="display:none;">
 				Choisir Export Terrain
@@ -86,10 +86,10 @@ session_start();
 <div class="container">
 	<div class="row">
 		<div class="col-lg-2">
-			<button id="ImportPciCible" class="btn btn-primary">Import Cibles PCI</button>
+			<button id="importPciCible" class="btn btn-primary">Import Cibles PCI</button>
 		</div>
 		<div class="col-lg-2">
-			<button id="ImportPciFiches" class="btn btn-primary">Import Fiches PCI</button>
+			<button id="importPciFiches" class="btn btn-primary">Import Fiches PCI</button>
 		</div>
 		<div class="col-lg-4"> 
         			<span class="label label-success" id="resultPci"></span>
