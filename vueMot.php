@@ -27,23 +27,12 @@ include_once 'header.php';
 		</div>       	     
 
 		<div class="col-lg-3">   
-			    <h2><?php echo " Constats du "; ?></h2>
+			    <h2><?php echo "  "; ?></h2>
 		</div>
-		<form action=<?php echo "\"vueMot.php\""; ?> method="post" enctype="multipart/form-data">
-			<div class="col-lg-4">   
-				<br> 			
-					<div class="input-daterange input-group" id="datepicker">	    
-					    <input type="text" class="input form-control" data-provide="datepicker" name="debut" value=<?php echo $_SESSION["debut"] ?> data-date-format="yyyy-mm-dd" data-date-language="fr"/>
-					    <span class="input-group-addon">au</span>
-					    <input type="text" class="input form-control" data-provide="datepicker" name="fin" value=<?php echo $_SESSION["fin"] ?> data-date-format="yyyy-mm-dd" data-date-language="fr"/>
-						
-					</div>						
-			</div>
-			<div class="col-lg-2"> 
-				<br>  
-			    <input type="submit" class="btn btn-default" value="Rafraichir">
-			</div>
-		</form>	
+		<?php 
+			$page="\"vueMot.php\"";
+			include_once 'tempDate.php';
+		?>	
 </div>
 <!-- /.row -->
 <br><br>
@@ -83,15 +72,6 @@ include_once 'header.php';
 </div>
 <!-- /.row -->
 </div>
-<!-- jQuery -->
-<script src="../assets/js/jquery-2.2.3.min.js"></script>
-
-<script src="js/evt.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="../assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="../assets/bootstrap-table/bootstrap-table.min.js"></script>
-<script src="../assets/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
-<script src="../assets/bootstrap-datepicker/locales/bootstrap-datepicker.fr.min.js"></script>
+<?php include('footer.php');?>
 </body>
 </html>

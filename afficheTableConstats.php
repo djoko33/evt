@@ -50,7 +50,7 @@
        			$urlBack="vueSP.php?sp=".$_GET['sp'];}   
        	elseif (isset($_GET['pci']))
        			{	$title= "Code PCI = ".$_GET['pci'];
-       			$urlBack="vuePci.php?pci=".$_GET['pci'];}
+       			$urlBack="vueSiteTdb?mp=0";}
        	elseif (isset($_GET['keyword']))
        			{	$title= "Mot cl&eacute; ".$_GET['keyword'];
        			$urlBack="vueMot.php";}

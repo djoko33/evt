@@ -45,7 +45,10 @@ include 'import.php';
 		</div>
 		<div class="col-lg-2">
 			<button id="traitementCodes" class="btn btn-primary">Traitement Codes</button>
-		</div>		
+		</div>
+		<div class="col-lg-2">
+			<button id="traitementPci" class="btn btn-primary">Traitement Pci</button>
+		</div>			
 	</div>
 	<br>
 	<div class="row">
@@ -122,6 +125,16 @@ include 'import.php';
             $.ajax({
                 type: 'POST',
                 url: 'traitementCodes.php',
+                success: function(data) {
+                    $('#result').text(data);  }
+            });
+   		});
+	});
+    $(document).ready(function(){
+        $('#traitementPci').click(function(){
+            $.ajax({
+                type: 'POST',
+                url: 'traitementPci.php',
                 success: function(data) {
                     $('#result').text(data);  }
             });
