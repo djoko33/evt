@@ -1,5 +1,5 @@
 <?php
-include('modele/connexionPG.php');
+include('../modele/connexionPG.php');
 
 // R�cup�ration des sections
 $reponse = $bdd->query('SELECT quad, libelle, categorie FROM codification ORDER BY categorie, quad');

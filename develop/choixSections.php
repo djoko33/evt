@@ -1,5 +1,5 @@
 <?php
-include('modele/connexionPG.php');
+include('../modele/connexionPG.php');
 
 // R�cup�ration des sections
 $reponse = $bdd->query('SELECT section, service FROM sections ORDER BY service, section');

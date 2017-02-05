@@ -1,5 +1,5 @@
 <?php
-include('modele/connexionPG.php');
+include('../modele/connexionPG.php');
 
 // R�cup�ration des SP
 $reponse = $bdd->query('SELECT * FROM sousprocessus ORDER BY mp, sp');
