@@ -28,7 +28,7 @@ include_once 'header.php';
 			    <h2><?php echo $_SESSION["sp"]; ?></h2>
 		</div>
 		<?php 
-			$page="sp.php?sp=". $_SESSION["sp"];
+			$page="\"sp.php?sp=". $_SESSION["sp"]."\"";
 			include_once 'temp/date.php';
 		?>		
 	</div>

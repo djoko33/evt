@@ -4,22 +4,22 @@
         <meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=9">
         <title>Affiche une table de CVT</title>
-	    <script src="../assets/js/jquery-2.2.3.min.js"></script>
-		<script src="../assets/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
-		<script src="../assets/bootstrap/js/bootstrap.min.js"></script>
-		<script src="../assets/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
-		<script src="../assets/bootstrap-table/bootstrap-table.min.js"></script>
-		<script src="../assets/bootstrap-table/extensions/export/bootstrap-table-export.min.js"></script>
-		<script type="text/javascript" src="../assets/tableExport/tableExport.min.js"></script>
-		<script type="text/javascript" src="../assets/tableExport/libs/FileSaver/FileSaver.min.js"></script> 
-		<script type="text/javascript" src="../assets/tableExport/libs/jsPDF/jspdf.min.js"></script> 
-		<script type="text/javascript" src="../assets/tableExport/libs/jsPDF-AutoTable/jspdf.plugin.autotable.js"></script> 
-		<script type="text/javascript" src="../assets/tableExport/libs/html2canvas/html2canvas.min.js"></script>
-		<link rel="stylesheet" href="../assets/bootstrap-datepicker/css/bootstrap-datepicker.min.css" />
-		<link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" href="../assets/bootstrap/css/bootstrap-theme.min.css">
-		<link rel="stylesheet" href="../assets/bootstrap-select/dist/css/bootstrap-select.min.css">
-    	<link rel="stylesheet" href="../assets/bootstrap-table/bootstrap-table.min.css">
+	    <script src="../../assets/js/jquery-2.2.3.min.js"></script>
+		<script src="../../assets/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+		<script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+		<script src="../../assets/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+		<script src="../../assets/bootstrap-table/bootstrap-table.min.js"></script>
+		<script src="../../assets/bootstrap-table/extensions/export/bootstrap-table-export.min.js"></script>
+		<script type="text/javascript" src="../../assets/tableExport/tableExport.min.js"></script>
+		<script type="text/javascript" src="../../assets/tableExport/libs/FileSaver/FileSaver.min.js"></script> 
+		<script type="text/javascript" src="../../assets/tableExport/libs/jsPDF/jspdf.min.js"></script> 
+		<script type="text/javascript" src="../../assets/tableExport/libs/jsPDF-AutoTable/jspdf.plugin.autotable.js"></script> 
+		<script type="text/javascript" src="../../assets/tableExport/libs/html2canvas/html2canvas.min.js"></script>
+		<link rel="stylesheet" href="../../assets/bootstrap-datepicker/css/bootstrap-datepicker.min.css" />
+		<link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="../../assets/bootstrap-select/dist/css/bootstrap-select.min.css">
+    	<link rel="stylesheet" href="../../assets/bootstrap-table/bootstrap-table.min.css">
 
     </head>
     <style>
@@ -42,14 +42,14 @@
 if (isset($_GET['serv_conc']))
 	{
 		$title= "Service concern&eacute; = ".$_GET['serv_conc']. " + Code = ".$_GET['code'];
-	    $urlBack="vueService.php?serv=".$_GET['serv_conc'];
-	    $urlData="jsonCVTServCode.php?serv_conc=".$_GET['serv_conc']."&nature=".$_GET['nature']."&code=".$_GET['code'];
+	    $urlBack="service.php?serv=".$_GET['serv_conc'];
+	    $urlData="../modele/jsonCvtServCode.php?serv_conc=".$_GET['serv_conc']."&nature=".$_GET['nature']."&code=".$_GET['code'];
 	}
 else
 	{
 		$title= "Service &eacute;metteur = ".$_GET['serv_emet']. " + Code = ".$_GET['code'];
-	    $urlBack="vueService.php?serv=".$_GET['serv_emet'];
-	    $urlData="jsonCVTServCode.php?serv_emet=".$_GET['serv_emet']."&nature=".$_GET['nature']."&code=".$_GET['code'];
+	    $urlBack="service.php?serv=".$_GET['serv_emet'];
+	    $urlData="../modele/jsonCvtServCode.php?serv_emet=".$_GET['serv_emet']."&nature=".$_GET['nature']."&code=".$_GET['code'];
 	}
        	
        	?>
@@ -57,7 +57,7 @@ else
 	<div class="row">
 	    <div class="col-lg-1">
 	        <p>
-  				<br><a href="main.php"><span class="glyphicon glyphicon-home logo-small"></span></a>
+  				<br><a href="../index.php"><span class="glyphicon glyphicon-home logo-small"></span></a>
 			</p>
 	    </div>
 	    <div class="col-lg-1">

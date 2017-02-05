@@ -28,8 +28,8 @@ include_once 'header.php';
 			    <h2><?php echo "TdB PCI"; ?></h2>
 		</div>
 		<?php 
-		$page="vue/siteTdb.php";
-		include_once 'tempDate.php';
+		$page="siteTdb.php?mp=0";
+		include_once 'temp/date.php';
 		?>		
 	</div>
 
@@ -37,7 +37,7 @@ include_once 'header.php';
 	<div class="row">
 	    <div class="col-lg-12">
 			<?php
-			include_once "countTdb.php";
+			include_once "../modele/countTdb.php";
 	        
 	        $id="nbPci Site";
 	        if ($_GET['mp']==0) {

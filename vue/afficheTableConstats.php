@@ -50,7 +50,7 @@
        			$urlBack="sp.php?sp=".$_GET['sp'];}   
        	elseif (isset($_GET['pci']))
        			{	$title= "Code PCI = ".$_GET['pci'];
-       			$urlBack="siteTdb?mp=0";}
+       			$urlBack="siteTdb.php?mp=0";}
        	elseif (isset($_GET['keyword']))
        			{	$title= "Mot cl&eacute; ".$_GET['keyword'];
        			$urlBack="mot.php";}

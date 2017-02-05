@@ -1,5 +1,5 @@
 <?php 
-include('connexionPG.php');
+include('../modele/connexionPG.php');
 $reponse = $bdd->prepare('SELECT * FROM pci_fiches WHERE code = ?');
 $reponse->execute(array($_GET['code']));
 $d=$reponse->fetchAll();
@@ -9,15 +9,15 @@ $reponse->closeCursor();?>
     <head>
         <meta charset="utf-8" />
         <title>Affiche une trame PCI</title>
-	    <script src="../assets/js/jquery-2.2.3.min.js"></script>
-		<script src="../assets/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
-		<script src="../assets/bootstrap/js/bootstrap.min.js"></script>
-		<script src="../assets/bootstrap-table/bootstrap-table.min.js"></script>
-		<link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" href="../assets/bootstrap/css/bootstrap-theme.min.css">
-		<link rel="stylesheet" href="../assets/bootstrap-select/dist/css/bootstrap-select.min.css">
-    	<link rel="stylesheet" href="../assets/bootstrap-table/bootstrap-table.min.css">
-    	<link rel="stylesheet" href="css/vue.css" type="text/css">
+	    <script src="../../assets/js/jquery-2.2.3.min.js"></script>
+		<script src="../../assets/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+		<script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+		<script src="../../assets/bootstrap-table/bootstrap-table.min.js"></script>
+		<link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="../../assets/bootstrap-select/dist/css/bootstrap-select.min.css">
+    	<link rel="stylesheet" href="../../assets/bootstrap-table/bootstrap-table.min.css">
+    	<link rel="stylesheet" href="../css/vue.css" type="text/css">
 		<style type="text/css">
 		    .bs-example{
 		    	margin: 20px;
@@ -65,7 +65,7 @@ $reponse->closeCursor();?>
 			<button type="button" class="btn btn-default" id="copy">Copier</button>
 		</div>
 		<div class="col-lg-6">
-			<?php echo '<a href="fiches/'.$d[0]['code'].'.doc">Compl&eacute;ments : <span class="glyphicon glyphicon-file "></span>         </a>';?>
+			<?php echo '<a href="../fiches/'.$d[0]['code'].'.doc">Compl&eacute;ments : <span class="glyphicon glyphicon-file "></span>         </a>';?>
 		</div>
 	</div>
 	 <!-- row -->
