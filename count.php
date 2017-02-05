@@ -1,6 +1,6 @@
 <?php
 include('connexionPG.php');
-//prepare un tableau accessible à toutes les fonctions permettant d'ajouter les libelles courts
+//prepare un tableau accessible ï¿½ toutes les fonctions permettant d'ajouter les libelles courts
 $reponse = $bdd->query('SELECT * FROM codification');
 $libCodes=array();
 while ($donnees = $reponse->fetch())
@@ -24,7 +24,7 @@ function lstCodesPA($plan) {
 }
 
 // $nat1=$nat2 -> nature, si $nat1=0 et $nat2=2 total
-//fournit la liste ordonnée des codes pour un service donné et un sens donné
+//fournit la liste ordonnï¿½e des codes pour un service donnï¿½ et un sens donnï¿½
 function countCodesService($serv, $sens, $nat1, $nat2) {
 	include('connexionPG.php');
 	$result=array();
@@ -45,7 +45,7 @@ function countCodesService($serv, $sens, $nat1, $nat2) {
 }
 
 // $nat1=$nat2 -> nature, si $nat1=0 et $nat2=2 total
-//fournit la liste ordonnée des codes pour le site donné et un sens donné
+//fournit la liste ordonnï¿½e des codes pour le site donnï¿½ et un sens donnï¿½
 function countCodesSite($nat1, $nat2) {
 	include('connexionPG.php');
 	$result=array();
@@ -58,7 +58,7 @@ function countCodesSite($nat1, $nat2) {
 	arsort($result);
 	return $result;
 }
-//fournit la liste ordonnée des services pour un code donné et un sens donné
+//fournit la liste ordonnï¿½e des services pour un code donnï¿½ et un sens donnï¿½
 function countServicesCode($code, $sens, $nat1, $nat2) {
 	include('connexionPG.php');
 	$result=array();
@@ -78,7 +78,7 @@ function countServicesCode($code, $sens, $nat1, $nat2) {
 	return $result;
 }
 
-//fournit la liste ordonnée des services pour un sp donné et un sens donné
+//fournit la liste ordonnï¿½e des services pour un sp donnï¿½ et un sens donnï¿½
 function countServicesSP($sp, $sens, $nat1, $nat2) {
 	include('connexionPG.php');
 	$result=array();
@@ -100,7 +100,7 @@ function countServicesSP($sp, $sens, $nat1, $nat2) {
 
 
 // $nat1=$nat2 -> nature, si $nat1=0 et $nat2=2 total
-//compte les pfi observées
+//compte les pfi observï¿½es
 function countPFIService($serv, $sens, $nat1, $nat2) {
 	include('connexionPG.php');
 	$result=array();
@@ -120,7 +120,7 @@ function countPFIService($serv, $sens, $nat1, $nat2) {
 }
 
 // $nat1=$nat2 -> nature, si $nat1=0 et $nat2=2 total
-//compte les CVT par trimestre et par annéee
+//compte les CVT par trimestre et par annï¿½ee
 function countCVTService($serv, $sens, $nat1, $nat2) {
 	include('connexionPG.php');
 	$result=array();
@@ -140,7 +140,7 @@ function countCVTService($serv, $sens, $nat1, $nat2) {
 }
 
 // $nat1=$nat2 -> nature, si $nat1=0 et $nat2=2 total
-//compte les CVT par trimestre et par annéee
+//compte les CVT par trimestre et par annï¿½ee
 function countCVTSiteTrim($nat1, $nat2) {
 	include('connexionPG.php');
 	$result=array();
@@ -154,7 +154,7 @@ function countCVTSiteTrim($nat1, $nat2) {
 }
 
 // $nat1=$nat2 -> nature, si $nat1=0 et $nat2=2 total
-//compte les CVT par mois et par annéee
+//compte les CVT par mois et par annï¿½ee
 function countCVTSite($nat1, $nat2) {
 	include('connexionPG.php');
 	$result=array();
@@ -170,7 +170,7 @@ function countCVTSite($nat1, $nat2) {
 
 
 // $nat1=$nat2 -> nature, si $nat1=0 et $nat2=2 total
-//compte les CVT par mois et par annéee
+//compte les CVT par mois et par annï¿½ee
 function _oldcountCVTService($serv, $sens, $nat1, $nat2) {
 	include('connexionPG.php');
 	$result=array();
@@ -190,7 +190,7 @@ function _oldcountCVTService($serv, $sens, $nat1, $nat2) {
 }
 
 // $nat1=$nat2 -> nature, si $nat1=0 et $nat2=2 total
-//compte les CVT par mois et par annéee pour un code
+//compte les CVT par mois et par annï¿½ee pour un code
 function countCodeDict($code, $nat1, $nat2) {
 	include('connexionPG.php');
 	$result=array();
@@ -213,7 +213,7 @@ function tabAnneeMois($anDebut, $moisDebut, $anFin, $moisFin){
 	return $tabAnneeMois;
 }
 
-// ajoute un zero devant les mois à 1 chiffre (utile pour le tri)
+// ajoute un zero devant les mois ï¿½ 1 chiffre (utile pour le tri)
 function moisAvecZero($mois) {
 	if ($mois<10) {
 		return '0'.$mois;
@@ -233,7 +233,7 @@ function countCode($code, $nat1, $nat2) {
 	{
 		$result[$nb[1].'-'.moisAvecZero($nb[0])]=$nb[2];
 	}
-	// remplit les mois intercalaires vides par des zéros ou renvoie NULL (utile pour graphiques chronologiques)
+	// remplit les mois intercalaires vides par des zï¿½ros ou renvoie NULL (utile pour graphiques chronologiques)
 	if ($result!=NULL) {		
 	$tabMoisComplet=tabAnneeMois(2015, 1, 2016, 12);
 	$tabMois=array_keys($result);
@@ -261,7 +261,7 @@ function countSP($sp, $nat1, $nat2) {
 	{
 		$result[$nb[1].'-'.moisAvecZero($nb[0])]=$nb[2];
 	}
-	// remplit les mois intercalaires vides par des zéros ou renvoie NULL (utile pour graphiques chronologiques)
+	// remplit les mois intercalaires vides par des zï¿½ros ou renvoie NULL (utile pour graphiques chronologiques)
 	if ($result!=NULL) {
 		$tabMoisComplet=tabAnneeMois(2015, 1, 2016, 12);
 		$tabMois=array_keys($result);
@@ -339,6 +339,21 @@ function countServEmet($servConc)
 	}
 	return $result;
 }
+
+//compte les constats emis par type d'emetteur (em ou cde)
+function countCvtEmis($type) {
+	include('connexionPG.php');
+	$result=array();
+	$lst=$bdd->prepare("SELECT cvt.emetteur, COUNT(cvt.emetteur) FROM cvt INNER JOIN emetteur ON (emetteur.type=?) AND (emetteur.nom=cvt.emetteur) AND (cvt.datecvt BETWEEN ? AND ?)GROUP BY cvt.emetteur ORDER BY cvt.emetteur");
+	$lst->execute(array($type, $_SESSION["debut"], $_SESSION["fin"]));
+	while ($x = $lst->fetch())
+	{
+		array_push($result, array("x"=>$x[0], "y"=>$x[1]));
+	}
+	return $result;
+}
+
+
 
 function top10($serv, $sens)
 {

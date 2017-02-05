@@ -32,7 +32,7 @@ $reponse->closeCursor();?>
 		</div>
 		<?php 
 		$page="vueSite.php";
-		include_once 'tempDate.php';
+		include_once 'temp/date.php';
 		?>
 	    <div class="col-lg-1">
 	      <p></p>
@@ -40,7 +40,7 @@ $reponse->closeCursor();?>
 	</div>
 <!-- /.row -->
 	<div class="row">
-	    <div class="col-lg-6">
+	    <div class="col-lg-2">
 			<?php 
 	        $title="Nb CVT par trimestre";
 	        $id="nbCVT";
@@ -49,40 +49,38 @@ $reponse->closeCursor();?>
 	        $datafield1_Header="Trimestre";
 	        $datafield2="nb";
 	        $datafield2_Header="Total";
-	        include 'tempTable2col.php';?>
+	        include '/temp/table2col.php';?>
 		</div>
-		<div class="col-lg-6">
+		<div class="col-lg-4">
 	        <?php 
 	        $title="Nb CVT par mois";
 	        $id="cvtparmois";
-	        include 'tempBarGraph.php';?>
-		</div>       
-	</div>
-<!-- /.row -->
-	<div class="row">
-	    <div class="col-lg-6">
+	        include 'temp/lineChart.php';?>
+		</div>
+		<div class="col-lg-6">
 	        <?php 
 	        $title="Top 10 ";
 	        $id="nbCVT";
 	        $data_url="top10Site.php";
 	        $datafield="code";
 	        $datafield_Header="Code";
-	        include 'tempTableComplete.php';?>
-		</div>
+	        include 'temp/tableComplete.php';?>
+		</div>      
+	</div>
+<!-- /.row -->
+	<div class="row">
 		<div class="col-lg-6">
-	    	<div class="panel panel-default">
-				<div class="panel-heading">
-				    <i class="fa fa-comment fa-fw"></i> Commentaires
-				</div>
-			<!-- /.panel-heading -->
-				<div  class="panel-body">
-				    <div id="comment" >Les commentaires du top 10</div>
-				     <button type="button" class="btn btn-xs">Sauvegarde</button>
-				</div>
-			 <!-- /.panel-body -->
-			</div>
-	    </div>
-	        
+	        <?php 
+	        $title="Presence tracee EM";
+	        $id="cvtparemetEm";
+	        include 'temp/barGraph.php';?>
+		</div>  
+	    <div class="col-lg-6">
+	        <?php 
+	        $title="Presence tracee CdS";
+	        $id="cvtparemetCds";
+	        include 'temp/barGraph.php';?>
+		</div>  	        
 	</div>
 <!-- /.row -->
 	<div class="row">
@@ -90,13 +88,13 @@ $reponse->closeCursor();?>
 	        <?php 
 	        $title="S&ucirc;ret&eacute; ";
 	        $id="surete";
-	        include 'tempBarGraph.php';?>
+	        include 'temp/barGraph.php';?>
 		</div>
 		<div class="col-lg-6">
 			<?php 
 	        $title="NQME";
 	        $id="nqme";
-	        include 'tempBarGraph.php';?>	    	
+	        include 'temp/barGraph.php';?>	    	
 	     </div>       
 	</div>
 <!-- /.row -->
@@ -105,13 +103,13 @@ $reponse->closeCursor();?>
 	        <?php 
 	        $title="S&ucirc;ret&eacute; ";
 	        $id="lineSurete";
-	        include 'tempLineChart.php';?>
+	        include 'temp/lineChart.php';?>
 		</div>
 		<div class="col-lg-6">
 			<?php 
 	        $title="NQME";
 	        $id="lineNQME";
-	        include 'tempLineChart.php';?>	    	
+	        include 'temp/lineChart.php';?>	    	
 	     </div>       
 	</div>
 <!-- /.row -->
@@ -142,6 +140,8 @@ var toolbarOptions = [
 	graph('codeparSite.php?pa=nqme', "nqme");
 	graph('codeparSite.php?pa=surete', "surete");
 	lineGraphSite('CVTparSite.php', 'cvtparmois');
+	barGraphXY('cvtParEmet.php?type=em', 'cvtparemetEm', 'nb CVT');
+	barGraphXY('cvtParEmet.php?type=cds', 'cvtparemetCds', 'nb CVT');
 
 	<?php 
 			include "codeparSiteMois.php";

@@ -200,7 +200,58 @@ function graph(jsondata, idGraph){
 	        });
 	    });
 	}
-	
+	function barGraphXY(jsondata, idGraph, leg){
+		var promise = $.getJSON(jsondata);
+		Chart.defaults.global.defaultFontSize= 8;
+		promise.done(function(data) {
+			var tot=[];
+			var lab=[];
+			  $.each(data, function(entryIndex, entry) {
+				tot.push(parseInt(entry.y));				
+				lab.push(entry.x);});
+	    var barChartData = {
+	        labels: lab,
+	        datasets: 
+	        [{
+	            label: leg,
+	            backgroundColor: "rgba(0,91,187,1)",
+	            data: tot
+	        }]
+	    }
+       	
+	    var ctx = document.getElementById(idGraph).getContext("2d");
+	    Chart.defaults.global.defaultFontSize= 8;
+	    window.myBar = new Chart(ctx, {
+	            type: 'bar',
+	            data: barChartData,
+	            options: 
+	            {
+	                title:{
+	                    display:false,
+	                    text:""
+	                },
+	    			legend: {
+            			display: false
+	    			},
+	                tooltips: {
+	                    mode: 'label'
+	                },
+	                animation: {
+		                duration: 0},
+	                responsive: true,
+	                scales: 
+	                {
+	                    xAxes: [{
+	                        stacked: true,
+	                    }],
+	                    yAxes: [{
+	                        stacked: true
+	                    }]
+	                }
+	            }
+	        });
+	    });
+	}
 	function lineGraph(jsondata, idGraph, code){
 		var promise = $.getJSON(jsondata);
 		Chart.defaults.global.defaultFontSize= 10;
@@ -283,8 +334,8 @@ function graph(jsondata, idGraph){
 	        datasets: 
 	        [{
 	            label: 'tot',
-	            backgroundColor: "rgba(80,158,47,1)",
-	            borderColor: "rgba(80,158,47,1)",
+	            backgroundColor: "rgba(0,91,187,1)",
+	            borderColor: "rgba(0,91,187,1)",
 	            lineTension: 0,
 	            fill: false,
 	            data: tot

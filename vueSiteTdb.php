@@ -48,7 +48,7 @@ include_once 'header.php';
 	        	$lstCodes=listeCodesPciMp('MP'.$_GET['mp']);
 	        	$title="PCI - MP".$_GET['mp'];
 	        }
-	        include 'tempTablePci.php';?>
+	        include 'temp/tablePci.php';?>
 		</div>  
 	</div>	
 

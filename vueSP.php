@@ -29,7 +29,7 @@ include_once 'header.php';
 		</div>
 		<?php 
 			$page="vueSP.php?sp=". $_SESSION["sp"];
-			include_once 'tempDate.php';
+			include_once 'temp/date.php';
 		?>		
 	</div>
 	<div class="row">
@@ -40,13 +40,13 @@ include_once 'header.php';
 	        $data_url="CVTparSPTrim.php?sp=".$_GET['sp'];
 	        $datafield="trim";
 	        $datafield_Header="Trimestre";
-	        include 'tempTableComplete.php';?>
+	        include 'temp/tableComplete.php';?>
 		</div>
 		<div class="col-lg-6">
 	        <?php 
 	        $title="Nb CVT - ".$_GET['sp'];
 	        $id="graphSP";
-	        include 'tempLineChart.php';?>
+	        include 'temp/lineChart.php';?>
 		</div>
 	</div>
 <!-- /.row -->
@@ -56,13 +56,13 @@ include_once 'header.php';
 	        <?php 
 	        $title=$_GET['sp']." - Services &eacute;metteurs";
 	        $id="graphSPEmet";
-	        include 'tempBarGraph.php';?>
+	        include 'temp/barGraph.php';?>
 		</div>
 		<div class="col-lg-6">
 			<?php 
 	        $title=$_GET['sp']." - Services concern&eacute;s";
 	        $id="graphSPConc";
-	        include 'tempBarGraph.php';?>	    	
+	        include 'temp/barGraph.php';?>	    	
 	     </div>       
 	</div>
 	<!-- /.row -->

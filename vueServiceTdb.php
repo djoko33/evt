@@ -32,7 +32,7 @@ include_once 'header.php';
 
 		<?php 
 		$page="vueServiceTdB.php?serv=". $_SESSION["serv"];
-		include_once 'tempDate.php';
+		include_once 'temp/date.php';
 		?>		
 	</div>
 <!-- /.row -->
@@ -48,13 +48,13 @@ include_once 'header.php';
 	        $datafield2_Header="Emetteur";
 	        $datafield3="nb";
 	        $datafield3_Header="Nb";
-	        include 'tempTable3col.php';?>
+	        include 'temp/table3col.php';?>
 		</div>
 		<div class="col-lg-6">
 			<?php 
 	        $title="PCI - ".$_GET['serv'];
 	        $id="nbPci Service";
-	        include 'tempTablePciServ.php';?>
+	        include 'temp/tablePciServ.php';?>
 	    </div>       
 	</div>
 <!-- /.row -->
@@ -68,7 +68,7 @@ include_once 'header.php';
 	        $datafield1_Header="Emetteur";
 	        $datafield2="nb";
 	        $datafield2_Header="Nb CVT";
-	        include 'tempTable2col.php';?>
+	        include 'temp/table2col.php';?>
 		</div>
 	    <div class="col-lg-6">
 			<?php 
@@ -79,7 +79,7 @@ include_once 'header.php';
 	        $datafield1_Header="Code PCI";
 	        $datafield2="nb";
 	        $datafield2_Header="Nb";
-	        include 'tempTable2col.php';?>
+	        include 'temp/table2col.php';?>
 	    </div>	        
 	</div>
 

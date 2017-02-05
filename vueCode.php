@@ -57,25 +57,25 @@ $reponse->closeCursor();
 	        $data_url="CVTparCodeTrim.php?code=".$_GET['code'];
 	        $datafield="trim";
 	        $datafield_Header="Trimestre";
-	        include 'tempTableComplete.php';?>
+	        include 'temp/tableComplete.php';?>
 		</div>
 		<div class="col-lg-3">
 	        <?php 
 	        $title="Nb CVT - ".$_GET['code'];
 	        $id="graphCode";
-	        include 'tempLineChart.php';?>
+	        include 'temp/lineChart.php';?>
 		</div>
 	    <div class="col-lg-3">
 	        <?php 
 	        $title=$_GET['code']." - Services &eacute;metteurs";
 	        $id="graphCodeEmet";
-	        include 'tempBarGraph.php';?>
+	        include 'temp/barGraph.php';?>
 		</div>
 		<div class="col-lg-3">
 			<?php 
 	        $title=$_GET['code']." - Services concern&eacute;s";
 	        $id="graphCodeConc";
-	        include 'tempBarGraph.php';?>	    	
+	        include 'temp/barGraph.php';?>	    	
 	     </div>       
 	</div>
 	<!-- /.row -->
@@ -98,7 +98,7 @@ $reponse->closeCursor();
 	        <?php 
 	        $title=$convert[$_GET['code']];
 	        $id="graphCodeFrx";
-	        include 'tempBarGraph.php';?>
+	        include 'temp/barGraph.php';?>
 		</div>
 		<div class="col-lg-9">
 			<table id="tableCVT" data-toggle="table" 
@@ -138,7 +138,7 @@ $reponse->closeCursor();
 			<?php
 			$title=$convert[$_GET['code']];
 			$id="graphCodeCid";
-			include 'tempBarGraph.php';?>
+			include 'temp/barGraph.php';?>
 		</div>
 		<div class="col-lg-9">
 			<table id="tableCVT" data-toggle="table" 

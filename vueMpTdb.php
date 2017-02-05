@@ -61,7 +61,7 @@ if (isset($_GET['serv'])) {
 <!-- <div class="col-lg-4+2"> -->	 		
 		<?php 
 		$page="vueSiteTdb.php";
-		include_once 'tempDate.php';
+		include_once 'temp/date.php';
 		?>
 <!-- </div> -->	
 	</div>
@@ -72,7 +72,7 @@ if (isset($_GET['serv'])) {
 			<?php 
 	        $title="PCI - Site";
 	        $id="nbPci Site";
-	        include 'tempTablePci.php';?>
+	        include 'temp/tablePci.php';?>
 		</div>  
 	</div>	
 

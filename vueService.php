@@ -31,7 +31,7 @@ include_once 'header.php';
 		</div>
 		<?php 
 		$page="\"vueService.php?serv=". $_SESSION["serv"]."\"";
-		include_once 'tempDate.php';
+		include_once 'temp/date.php';
 		?>	
 	</div>
 <!-- /.row -->
@@ -45,7 +45,7 @@ include_once 'header.php';
 	        $datafield1_Header="Trimestre";
 	        $datafield2="nb";
 	        $datafield2_Header="Total";
-	        include 'tempTable2col.php';?>
+	        include 'temp/table2col.php';?>
 		</div>
 		<div class="col-lg-6">
 			<?php 
@@ -56,7 +56,7 @@ include_once 'header.php';
 	        $datafield1_Header="PFI";
 	        $datafield2="nb";
 	        $datafield2_Header="Total";
-	        include 'tempTable2col.php';?>
+	        include 'temp/table2col.php';?>
 	    </div>	        
 	</div>
 <!-- /.row -->
@@ -70,7 +70,7 @@ include_once 'header.php';
 	        $datafield1_Header="Services Observ&eacute;s";
 	        $datafield2="nb";
 	        $datafield2_Header="";
-	        include 'tempTable2col.php';?>
+	        include 'temp/table2col.php';?>
 		</div>
 		<div class="col-lg-6">
 			<?php 
@@ -81,7 +81,7 @@ include_once 'header.php';
 	        $datafield1_Header="Services Observants";
 	        $datafield2="nb";
 	        $datafield2_Header="";
-	        include 'tempTable2col.php';?>
+	        include 'temp/table2col.php';?>
 	    </div>	        
 	        
 	</div>
@@ -94,7 +94,7 @@ include_once 'header.php';
 	        $data_url="top10.php?serv=".$_GET['serv']."&sens=emet";
 	        $datafield="code";
 	        $datafield_Header="Code";
-	        include 'tempTableComplete.php';?>
+	        include 'temp/tableComplete.php';?>
 		</div>
 		<div class="col-lg-6">
 	    	<?php 
@@ -103,7 +103,7 @@ include_once 'header.php';
 	        $data_url="top10.php?serv=".$_GET['serv']."&sens=conc";
 	        $datafield="code";
 	        $datafield_Header="Code";
-	        include 'tempTableComplete.php';?>
+	        include 'temp/tableComplete.php';?>
 	    </div>
 	        
 	</div>
@@ -112,13 +112,13 @@ include_once 'header.php';
 	        <?php 
 	        $title="S&ucirc;ret&eacute; - ".$_GET['serv']." &eacute;metteur";
 	        $id="SurEmet";
-	        include 'tempBarGraph.php';?>
+	        include 'temp/barGraph.php';?>
 		</div>
 		<div class="col-lg-6">
 			<?php 
 	        $title="S&ucirc;ret&eacute; - ".$_GET['serv']." concern&eacute;";
 	        $id="SurConc";
-	        include 'tempBarGraph.php';?>	    	
+	        include 'temp/barGraph.php';?>	    	
 	     </div>       
 	</div>
 <!-- /.row -->
@@ -128,14 +128,14 @@ include_once 'header.php';
 	        $title="S&ucirc;ret&eacute; - ".$_GET['serv']." &eacute;metteur";
 	        $pa="surete";
 	        $sens="emet";
-	        include 'tempTablesCVT.php';?>
+	        include 'temp/tablesCVT.php';?>
 		</div>
 		<div class="col-lg-6">
 			<?php 
 	        $title="S&ucirc;ret&eacute; - ".$_GET['serv']." concern&eacute;";
 	        $pa="surete";
 	        $sens="conc";
-	        include 'tempTablesCVT.php';?>
+	        include 'temp/tablesCVT.php';?>
 	     </div>       
 	</div>
 	<!-- /.row -->
@@ -144,13 +144,13 @@ include_once 'header.php';
 	        <?php 
 	        $title="NQME - ".$_GET['serv']." &eacute;metteur";
 	        $id="NqmeEmet";
-	        include 'tempBarGraph.php';?>
+	        include 'temp/barGraph.php';?>
 		</div>
 		<div class="col-lg-6">
 			<?php 
 	        $title="NQME - ".$_GET['serv']." concern&eacute;";
 	        $id="NqmeConc";
-	        include 'tempBarGraph.php';?>	    	
+	        include 'temp/barGraph.php';?>	    	
 	     </div>       
 	</div>
 	<!-- /.row -->
@@ -160,14 +160,14 @@ include_once 'header.php';
 	        $title="NQME - ".$_GET['serv']." &eacute;metteur";
 	        $pa="MQME";
 	        $sens="emet";
-	        include 'tempTablesCVT.php';?>
+	        include 'temp/tablesCVT.php';?>
 		</div>
 		<div class="col-lg-6">
 			<?php 
 	        $title="NQME - ".$_GET['serv']." concern&eacute;";
 	        $pa="MQME";
 	        $sens="conc";
-	        include 'tempTablesCVT.php';?>
+	        include 'temp/tablesCVT.php';?>
 	     </div>       
 	</div>
 	<!-- /.row -->
@@ -176,13 +176,13 @@ include_once 'header.php';
 	        <?php 
 	        $title="Codes Sp&eacute;cifiques Service - ".$_GET['serv']." &eacute;metteur";
 	        $id="ServEmet";
-	        include 'tempBarGraph.php';?>
+	        include 'temp/barGraph.php';?>
 		</div>
 		<div class="col-lg-6">
 			<?php 
 	        $title="Codes Sp&eacute;cifiques Service - ".$_GET['serv']." concern&eacute;";
 	        $id="ServConc";
-	        include 'tempBarGraph.php';?>	    	
+	        include 'temp/barGraph.php';?>	    	
 	     </div>       
 	</div>
 	<!-- /.row -->
@@ -193,14 +193,14 @@ include_once 'header.php';
 	        $title="Codes Sp&eacute;cifiques - ".$_GET['serv']." &eacute;metteur";
 	        $pa=$_GET['serv'];
 	        $sens="emet";
-	        include 'tempTablesCVT.php';?>
+	        include 'temp/tablesCVT.php';?>
 		</div>
 		<div class="col-lg-6">
 			<?php 
 	        $title="Codes Sp&eacute;cifiques - ".$_GET['serv']." concern&eacute;";
 	        $pa=$_GET['serv'];
 	        $sens="conc";
-	        include 'tempTablesCVT.php';?>
+	        include 'temp/tablesCVT.php';?>
 	     </div>       
 	</div>
 	<!-- /.row -->

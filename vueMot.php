@@ -31,7 +31,7 @@ include_once 'header.php';
 		</div>
 		<?php 
 			$page="\"vueMot.php\"";
-			include_once 'tempDate.php';
+			include_once 'temp/date.php';
 		?>	
 </div>
 <!-- /.row -->
