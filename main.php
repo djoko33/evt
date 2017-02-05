@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once('connexionPG.php');
+include_once('modele/connexionPG.php');
 $reponse = $bdd->query('SELECT * FROM options ORDER BY id');
 $donnees = $reponse->fetchAll(PDO::FETCH_ASSOC);
 $_SESSION["debut"] = $donnees[0]['value'];
@@ -59,14 +59,14 @@ for ($i = 1; $i < 9; $i++)
 					<li class="dropdown-submenu"><a href="">Fiches PCI</a>
 						<ul class="dropdown-menu">
 <?php
-	include('connexionPG.php');
+	include('modele/connexionPG.php');
 	for ($i = 1; $i < 9; $i++) 
 	{
 
 					echo '<li class="dropdown-submenu"><a href="">MP'.$i.'</a>
 						<ul class="dropdown-menu">';
 	
-	// Récupération des codes PCI du MP
+	// Rï¿½cupï¿½ration des codes PCI du MP
 	$rep = $bdd->prepare('SELECT DISTINCT(code), titre FROM pci_fiches WHERE mp= ? ORDER BY code');
 	$rep->execute(array($i));
 	$s="";
@@ -166,8 +166,8 @@ for ($i = 1; $i < 9; $i++)
       		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Mon Code<span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
 					<?php
-					include('connexionPG.php');
-					// Récupération des codes
+					include('modele/connexionPG.php');
+					// Rï¿½cupï¿½ration des codes
 					$reponse = $bdd->query('SELECT DISTINCT(categorie) FROM codification ORDER BY categorie');
 					$s="";
 					while ($donnees = $reponse->fetch())
@@ -190,8 +190,8 @@ for ($i = 1; $i < 9; $i++)
         <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Mon Sous-Processus<span class="caret"></span></a>
 				<ul class="dropdown-menu" role="menu">
 					<?php
-					include('connexionPG.php');
-					// Récupération des MP
+					include('modele/connexionPG.php');
+					// Rï¿½cupï¿½ration des MP
 					$reponse = $bdd->query('SELECT DISTINCT(mp) FROM sousprocessus ORDER BY mp');
 					$s="";
 					while ($donnees = $reponse->fetch())

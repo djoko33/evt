@@ -30,7 +30,7 @@ include_once 'header.php';
 			    <h2><?php echo "  "; ?></h2>
 		</div>
 		<?php 
-			$page="\"vue/mot.php\"";
+			$page="\"mot.php\"";
 			include_once 'temp/date.php';
 		?>	
 </div>
@@ -38,7 +38,7 @@ include_once 'header.php';
 <br><br>
 <div class="row">
 	    <div class="col-lg-6">
-			<form action="../afficheTableConstats.php" method="get" enctype="text/plain">
+			<form action="afficheTableConstats.php" method="get" enctype="text/plain">
 				<span class="label label-default">Recherche Terrain</span>
 			    <div class="input-group">
 					
@@ -56,7 +56,7 @@ include_once 'header.php';
 <!-- /.row -->
 <div class="row">
 	    <div class="col-lg-6">
-			<form action="../afficheTableConstats.php" method="get" enctype="text/plain">
+			<form action="afficheTableConstats.php" method="get" enctype="text/plain">
 				<span class="label label-default">Recherche PtiREX</span>
 			    <div class="input-group">
 	      			<input type="text" name="keywordPtiRex" class="form-control" placeholder="mot par mot s&eacute;par&eacute;s par des &">

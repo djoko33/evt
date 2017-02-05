@@ -1,5 +1,5 @@
 <?php
-include('../connexionPG.php');
+include('../modele/connexionPG.php');
 //traitement SP
 $reponse = $bdd->query('SELECT reference, emetteur, serv_emet, serv_conc,  dateCVT, sp, nature FROM cvt');
 $sqlSP = 'INSERT INTO spcvt (reference, emetteur, serv_emet, serv_conc,  datecvt, sp, nature, categorie, pfi) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)';

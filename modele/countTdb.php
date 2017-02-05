@@ -28,7 +28,7 @@ function listeCodesPciMp($mp) {
 }
 
 
-//fournit la liste ordonnée du nb de cvt émis par les agents d'un service donné
+//fournit la liste ordonnï¿½e du nb de cvt ï¿½mis par les agents d'un service donnï¿½
 function countNbCvtEmet($serv) {
 	include('connexionPG.php');
 	$result=array();
@@ -41,7 +41,7 @@ function countNbCvtEmet($serv) {
 	return $result;
 }
 
-//fournit la liste ordonnée du nb de PCI émis par  agent d'un service donné par code "class"= code ; "nb"=nb  "emet"=emetteur pour un service
+//fournit la liste ordonnï¿½e du nb de PCI ï¿½mis par  agent d'un service donnï¿½ par code "class"= code ; "nb"=nb  "emet"=emetteur pour un service
 function countNbPciEmet($serv) {
 	include('connexionPG.php');
 	$result=array();
@@ -106,7 +106,7 @@ function countNbPciMp($mp) {
 	}
 	return $result;
 }
-// fournit un tableau des [codes PCI]= nb à faire pour un service
+// fournit un tableau des [codes PCI]= nb ï¿½ faire pour un service
 function ciblePciServ($serv) {
 	include('connexionPG.php');
 	$result=array();
@@ -119,7 +119,7 @@ function ciblePciServ($serv) {
 	return $result;
 }
 
-// fournit un tableau des [serv]= nb à faire pour un code
+// fournit un tableau des [serv]= nb ï¿½ faire pour un code
 function ciblePciCode($code) {
 	include('connexionPG.php');
 	$result=array();
@@ -210,7 +210,7 @@ function pciSyntheseCodeSite($code) {
 	return $result;
 }
 
-// tableau pour un mp donné des codes associés, du total réalisé, redressé (real si inf à cible, cible sinon)
+// tableau pour un mp donnï¿½ des codes associï¿½s, du total rï¿½alisï¿½, redressï¿½ (real si inf ï¿½ cible, cible sinon)
 function pciSyntheseLstCodes($lstCodes) {
 	//$lstCodes=listeCodesPci();
 	$result=array();

@@ -1,7 +1,7 @@
 <?php
-include('connexionPG.php');
+include('modele/connexionPG.php');
 
-// Récupération des SP
+// Rï¿½cupï¿½ration des SP
 $reponse = $bdd->query('SELECT * FROM sousprocessus ORDER BY mp, sp');
 $s="";
 while ($donnees = $reponse->fetch())

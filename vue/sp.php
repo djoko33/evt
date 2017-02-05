@@ -16,19 +16,19 @@ include_once 'header.php';
 	    </div>
 	    <div class="col-lg-1">
 	        <p>
-  				<br><a class="link tooltip-link"   data-toggle="tooltip"   data-original-title="D&eacute;tails CVT N&eacute;gatifs" href="<?php echo "../afficheTableConstats.php?sp=".$_GET['sp']."&nature=0"; ?>"><span class="glyphicon glyphicon-list-alt logo-small-red"></span></a>
+  				<br><a class="link tooltip-link"   data-toggle="tooltip"   data-original-title="D&eacute;tails CVT N&eacute;gatifs" href="<?php echo "afficheTableConstats.php?sp=".$_GET['sp']."&nature=0"; ?>"><span class="glyphicon glyphicon-list-alt logo-small-red"></span></a>
 			</p>
 		</div>
 		<div class="col-lg-1">
 	        <p>
-  				<br><a class="link tooltip-link"   data-toggle="tooltip"   data-original-title="D&eacute;tails CVT Positifs" href="<?php echo "../afficheTableConstats.php?sp=".$_GET['sp']."&nature=1"; ?>"><span class="glyphicon glyphicon-list-alt logo-small-green"></span></a>
+  				<br><a class="link tooltip-link"   data-toggle="tooltip"   data-original-title="D&eacute;tails CVT Positifs" href="<?php echo "afficheTableConstats.php?sp=".$_GET['sp']."&nature=1"; ?>"><span class="glyphicon glyphicon-list-alt logo-small-green"></span></a>
 			</p>
 		</div>
 		<div class="col-lg-3">   
 			    <h2><?php echo $_SESSION["sp"]; ?></h2>
 		</div>
 		<?php 
-			$page="vue/sp.php?sp=". $_SESSION["sp"];
+			$page="sp.php?sp=". $_SESSION["sp"];
 			include_once 'temp/date.php';
 		?>		
 	</div>
@@ -37,7 +37,7 @@ include_once 'header.php';
 			<?php 
 	        $title="Nb CVT - ".$_GET['sp'];
 	        $id="nbCVT";
-	        $data_url="CVTparSPTrim.php?sp=".$_GET['sp'];
+	        $data_url="../contr/cvtParSpTrim.php?sp=".$_GET['sp'];
 	        $datafield="trim";
 	        $datafield_Header="Trimestre";
 	        include 'temp/tableComplete.php';?>
@@ -70,9 +70,9 @@ include_once 'header.php';
 <?php include('footer.php');?>
 <script>	
 	var sp=getQuerystring('sp');	
-	barGraph('serviceparSP.php?sp='+sp+'&sens=emet', "graphSPEmet");
-	barGraph('serviceparSP.php?sp='+sp+'&sens=conc', "graphSPConc");
-	lineGraph('CVTparSP.php?sp='+sp, "graphSP", sp);
+	barGraph('../contr/serviceparSp.php?sp='+sp+'&sens=emet', "graphSPEmet");
+	barGraph('../contr/serviceparSp.php?sp='+sp+'&sens=conc', "graphSPConc");
+	lineGraph('../contr/CvtparSp.php?sp='+sp, "graphSP", sp);
 
 	$(function() 
 			 {  

@@ -1,5 +1,5 @@
 <?php 
-include_once "countTdb.php";
+include_once "../modele/countTdb.php";
 $lstCodes=listeCodesPci();
 //$lstCodes=array('MP107', 'MP201', 'MP202', 'MP207', 'MP502');
 $serv=$_GET['serv'];

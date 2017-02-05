@@ -5,7 +5,7 @@ include_once 'session.php';
 $pageTitle="Exploitation Visites Terrain - RMPAC-M";
 include_once 'header.php';
 
-include('connexionPG.php');
+include('../modele/connexionPG.php');
 $reponse = $bdd->query('SELECT * FROM codification');
 $libCodes=array();
 while ($donnees = $reponse->fetch())
@@ -31,7 +31,7 @@ $reponse->closeCursor();?>
 			    <h2><?php echo "RMPAC-M "; ?></h2>
 		</div>
 		<?php 
-		$page="vue/site.php";
+		$page="site.php";
 		include_once 'temp/date.php';
 		?>
 	    <div class="col-lg-1">
@@ -44,7 +44,7 @@ $reponse->closeCursor();?>
 			<?php 
 	        $title="Nb CVT par trimestre";
 	        $id="nbCVT";
-	        $data_url="CVTparSiteTrim.php";
+	        $data_url="../contr/cvtParSiteTrim.php";
 	        $datafield1="trim";
 	        $datafield1_Header="Trimestre";
 	        $datafield2="nb";
@@ -61,7 +61,7 @@ $reponse->closeCursor();?>
 	        <?php 
 	        $title="Top 10 ";
 	        $id="nbCVT";
-	        $data_url="top10Site.php";
+	        $data_url="../contr/top10Site.php";
 	        $datafield="code";
 	        $datafield_Header="Code";
 	        include 'temp/tableComplete.php';?>
@@ -116,7 +116,7 @@ $reponse->closeCursor();?>
 </div>
 <?php include 'footer.php';?>
 
-<script src="../assets/js/quill.js"></script>
+<script src="../../assets/js/quill.js"></script>
 <script>
 var toolbarOptions = [
                       ['bold', 'italic', 'underline'],        // toggled buttons
@@ -137,9 +137,9 @@ var toolbarOptions = [
 	
 	
 	
-	graph('codeparSite.php?pa=nqme', "nqme");
-	graph('codeparSite.php?pa=surete', "surete");
-	lineGraphSite('CVTparSite.php', 'cvtparmois');
+	graph('../contr/codeParSite.php?pa=nqme', "nqme");
+	graph('../contr/codeParSite.php?pa=surete', "surete");
+	lineGraphSite('../contr/cvtParSite.php', 'cvtparmois');
 
 	<?php 
 	$d=strtotime($_SESSION["debut"]);
@@ -147,11 +147,11 @@ var toolbarOptions = [
 	$cibleCds="'".ceil(($f-$d)*48/(365*24*3600))."'";
 	$cibleEm="'".ceil(($f-$d)*36/(365*24*3600))."'";
 	?>
-	barGraphXYMix('cvtParEmet.php?type=em', 'cvtparemetEm', 'nb CVT',<?php echo $cibleEm;?>);
-	barGraphXYMix('cvtParEmet.php?type=cds', 'cvtparemetCds', 'nb CVT',<?php echo $cibleCds;?>);
+	barGraphXYMix('../contr/cvtParEmet.php?type=em', 'cvtparemetEm', 'nb CVT',<?php echo $cibleEm;?>);
+	barGraphXYMix('../contr/cvtParEmet.php?type=cds', 'cvtparemetCds', 'nb CVT',<?php echo $cibleCds;?>);
 
 	<?php 
-			include "codeparSiteMois.php";
+			include "../contr/codeParSiteMois.php";
 			global $libCodes;
 			$nqme=array("EM01", "EM02", "EM06", "EM08", "EM09", "EM17", "EM19", "OM11", "PH05");
 			$surete=array("EM05", "EM08", "EM13", "MA14", "SN01", "SN03", "SN14", "SN16");

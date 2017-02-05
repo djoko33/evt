@@ -1,5 +1,5 @@
 <?php
-include('../connexionPG.php');
+include('../modele/connexionPG.php');
 if (($handle = fopen("pciFiches.csv", "r")) !== FALSE) {
 	while (($data = fgetcsv($handle, 5000, ";")) !== FALSE) 
 	{

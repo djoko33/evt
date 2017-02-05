@@ -1,7 +1,7 @@
 <?php
-include('connexionPG.php');
+include('modele/connexionPG.php');
 
-// Récupération des sections
+// Rï¿½cupï¿½ration des sections
 $reponse = $bdd->query('SELECT quad, libelle, categorie FROM codification ORDER BY categorie, quad');
 $s="";
 while ($donnees = $reponse->fetch())

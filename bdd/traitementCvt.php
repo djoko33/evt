@@ -1,5 +1,5 @@
 <?php
-include('../connexionPG.php');
+include('../modele/connexionPG.php');
 include('traitementFn.php');
 $reponse = $bdd->query('SELECT * FROM importcvt');
 $sql = array();

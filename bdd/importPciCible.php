@@ -1,5 +1,5 @@
 <?php
-include('../connexionPG.php');
+include('../modele/connexionPG.php');
 //todo � generer la liste des services
 $lstServ=array('1_EM', 'AUT', 'CDT', 'EC' , 'ECE', 'ING', 'LOG' ,'MSR' , 'MTE' , 'PPSI', 'QSPR' , 'S3P', 'SIR', 'MRH', 'MCG', 'MCOM');
 //todo changer le chemin de pci.csv vers le repertoire upload

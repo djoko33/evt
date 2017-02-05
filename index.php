@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once('connexionPG.php');
+include_once('modele/connexionPG.php');
 $reponse = $bdd->query('SELECT * FROM options ORDER BY id');
 $donnees = $reponse->fetchAll(PDO::FETCH_ASSOC);
 $_SESSION["debut"] = $donnees[0]['value'];
@@ -59,7 +59,7 @@ for ($i = 1; $i < 9; $i++)
 					<li class="dropdown-submenu"><a href="">Fiches PCI</a>
 						<ul class="dropdown-menu">
 <?php
-	include('connexionPG.php');
+	include('modele/connexionPG.php');
 	for ($i = 1; $i < 9; $i++) 
 	{
 
@@ -91,73 +91,73 @@ for ($i = 1; $i < 9; $i++)
                 	<li class="dropdown-submenu"><a href="#">AUT</a>
 						<ul class="dropdown-menu">
 							<li><a href="vue/service.php?serv=AUT">Analyse</a></li>
-							<li><a href="vue/serviceTdB.php?serv=AUT">TdB</a></li>
+							<li><a href="vue/serviceTdb.php?serv=AUT">TdB</a></li>
 						</ul>
                     </li>
                     <li class="dropdown-submenu"><a href="#">CDT</a>
 						<ul class="dropdown-menu">
 							<li><a href="vue/service.php?serv=CDT">Analyse</a></li>
-							<li><a href="vue/serviceTdB.php?serv=CDT">TdB</a></li>
+							<li><a href="vue/serviceTdb.php?serv=CDT">TdB</a></li>
 						</ul>
                     </li>
                     <li class="dropdown-submenu"><a href="#">EC</a>
 						<ul class="dropdown-menu">
 							<li><a href="vue/service.php?serv=EC">Analyse</a></li>
-							<li><a href="vue/serviceTdB.php?serv=EC">TdB</a></li>
+							<li><a href="vue/serviceTdb.php?serv=EC">TdB</a></li>
 						</ul>
                     </li>
                     <li class="dropdown-submenu"><a href="#">ECE</a>
 						<ul class="dropdown-menu">
 							<li><a href="vue/service.php?serv=ECE">Analyse</a></li>
-							<li><a href="vue/serviceTdB.php?serv=ECE">TdB</a></li>
+							<li><a href="vue/serviceTdb.php?serv=ECE">TdB</a></li>
 						</ul>
                     </li>
                     <li class="dropdown-submenu"><a href="#">EM</a>
 						<ul class="dropdown-menu">
 							<li><a href="vue/service.php?serv=1_EM">Analyse</a></li>
-							<li><a href="vue/serviceTdB.php?serv=1_EM">TdB</a></li>
+							<li><a href="vue/serviceTdb.php?serv=1_EM">TdB</a></li>
 						</ul>
                     </li>
                     <li class="dropdown-submenu"><a href="#">ING</a>
 						<ul class="dropdown-menu">
 							<li><a href="vue/service.php?serv=ING">Analyse</a></li>
-							<li><a href="vue/serviceTdB.php?serv=ING">TdB</a></li>
+							<li><a href="vue/serviceTdb.php?serv=ING">TdB</a></li>
 						</ul>
                     </li>    
                     <li class="dropdown-submenu"><a href="#">LOG</a>
 						<ul class="dropdown-menu">
 							<li><a href="vue/service.php?serv=LOG">Analyse</a></li>
-							<li><a href="vue/serviceTdB.php?serv=LOG">TdB</a></li>
+							<li><a href="vue/serviceTdb.php?serv=LOG">TdB</a></li>
 						</ul>
                     </li>    
                     <li class="dropdown-submenu"><a href="#">MSR</a>
 						<ul class="dropdown-menu">
 							<li><a href="vue/service.php?serv=MSR">Analyse</a></li>
-							<li><a href="vue/serviceTdB.php?serv=MSR">TdB</a></li>
+							<li><a href="vue/serviceTdb.php?serv=MSR">TdB</a></li>
 						</ul>
                     </li>
                     <li class="dropdown-submenu"><a href="#">MTE</a>
 						<ul class="dropdown-menu">
 							<li><a href="vue/service.php?serv=MTE">Analyse</a></li>
-							<li><a href="vue/serviceTdB.php?serv=MTE">TdB</a></li>
+							<li><a href="vue/serviceTdb.php?serv=MTE">TdB</a></li>
 						</ul>
                     </li>                         
                     <li class="dropdown-submenu"><a href="#">QSPR</a>
 						<ul class="dropdown-menu">
 							<li><a href="vue/service.php?serv=QSPR">Analyse</a></li>
-							<li><a href="vue/serviceTdB.php?serv=QSPR">TdB</a></li>
+							<li><a href="vue/serviceTdb.php?serv=QSPR">TdB</a></li>
 						</ul>
                     </li>                      
                     <li class="dropdown-submenu"><a href="#">SIR</a>
 						<ul class="dropdown-menu">
 							<li><a href="vue/service.php?serv=SIR">Analyse</a></li>
-							<li><a href="vue/serviceTdB.php?serv=SIR">TdB</a></li>
+							<li><a href="vue/serviceTdb.php?serv=SIR">TdB</a></li>
 						</ul>
                     </li>                         
                     <li class="dropdown-submenu"><a href="#">S3P</a>
 						<ul class="dropdown-menu">
 							<li><a href="vue/service.php?serv=S3P">Analyse</a></li>
-							<li><a href="vue/serviceTdB.php?serv=S3P">TdB</a></li>
+							<li><a href="vue/serviceTdb.php?serv=S3P">TdB</a></li>
 						</ul>
                     </li>                        
                 </ul>
@@ -166,7 +166,7 @@ for ($i = 1; $i < 9; $i++)
       		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Mon Code<span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
 					<?php
-					include('connexionPG.php');
+					include('modele/connexionPG.php');
 					// R�cup�ration des codes
 					$reponse = $bdd->query('SELECT DISTINCT(categorie) FROM codification ORDER BY categorie');
 					$s="";
@@ -178,7 +178,7 @@ for ($i = 1; $i < 9; $i++)
 						$rep->execute(array($donnees['categorie']));
 						while ($don = $rep->fetch())
 							{
-								echo '<li><a href="vueCode.php?code='.$don['quad'].'">'.$don['quad'].' : '.$don['libelle'].'</a></li>';
+								echo '<li><a href="vue/code.php?code='.$don['quad'].'">'.$don['quad'].' : '.$don['libelle'].'</a></li>';
 							}
 							$rep->closeCursor();	
 						echo '</ul>
@@ -190,7 +190,7 @@ for ($i = 1; $i < 9; $i++)
         <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Mon Sous-Processus<span class="caret"></span></a>
 				<ul class="dropdown-menu" role="menu">
 					<?php
-					include('connexionPG.php');
+					include('modele/connexionPG.php');
 					// R�cup�ration des MP
 					$reponse = $bdd->query('SELECT DISTINCT(mp) FROM sousprocessus ORDER BY mp');
 					$s="";

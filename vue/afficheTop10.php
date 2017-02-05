@@ -25,7 +25,7 @@
 
 <body>
 <table id="top10" data-toggle="table" class="table table-striped"
-       	data-url=<?php echo 'top10.php'   	?> >
+       	data-url=<?php echo '../contr/top10.php'   	?> >
 
     <thead>
     <tr>

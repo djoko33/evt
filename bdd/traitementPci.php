@@ -1,7 +1,7 @@
 <?php
 //injecte dans la table PCI les donn�es n�cessaires au TdB
 include_once 'traitementFn.php';
-include('../connexionPG.php');// todo changer le chemin
+include('../modele/connexionPG.php');// todo changer le chemin
 $reponse = $bdd->query("SELECT * FROM importcvt WHERE decouvert LIKE 'PCI%'");
 
 

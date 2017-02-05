@@ -1,10 +1,10 @@
 <?php
-include('connexionPG.php');
+include('modele/connexionPG.php');
 
-// Récupération des sections
+// Rï¿½cupï¿½ration des sections
 $reponse = $bdd->query('SELECT section, service FROM sections ORDER BY service, section');
 
-// Affichage de chaque message (toutes les données sont protégées par htmlspecialchars)
+// Affichage de chaque message (toutes les donnï¿½es sont protï¿½gï¿½es par htmlspecialchars)
 $s="";
 while ($donnees = $reponse->fetch())
 {

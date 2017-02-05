@@ -121,7 +121,7 @@ include_once 'header.php';
 	        $title="S&ucirc;ret&eacute; - ".$_GET['serv']." &eacute;metteur";
 	        $pa="surete";
 	        $sens="emet";
-	        include 'temp/tablesCVT.php';?>
+	        include 'temp/tablesCvt.php';?>
 		</div>
 		<div class="col-lg-3">
 			<?php 
@@ -134,7 +134,7 @@ include_once 'header.php';
 	        $title="S&ucirc;ret&eacute; - ".$_GET['serv']." concern&eacute;";
 	        $pa="surete";
 	        $sens="conc";
-	        include 'temp/tablesCVT.php';?>
+	        include 'temp/tablesCvt.php';?>
 	     </div>       
 	</div>
 	<!-- /.row -->
@@ -150,7 +150,7 @@ include_once 'header.php';
 	        $title="NQME - ".$_GET['serv']." &eacute;metteur";
 	        $pa="MQME";
 	        $sens="emet";
-	        include 'temp/tablesCVT.php';?>
+	        include 'temp/tablesCvt.php';?>
 		</div>
 		<div class="col-lg-3">
 			<?php 
@@ -163,7 +163,7 @@ include_once 'header.php';
 	        $title="NQME - ".$_GET['serv']." concern&eacute;";
 	        $pa="MQME";
 	        $sens="conc";
-	        include 'temp/tablesCVT.php';?>
+	        include 'temp/tablesCvt.php';?>
 	     </div>       
 	</div>
 	<!-- /.row -->
@@ -189,14 +189,14 @@ include_once 'header.php';
 	        $title="Codes Sp&eacute;cifiques - ".$_GET['serv']." &eacute;metteur";
 	        $pa=$_GET['serv'];
 	        $sens="emet";
-	        include 'temp/tablesCVT.php';?>
+	        include 'temp/tablesCvt.php';?>
 		</div>
 		<div class="col-lg-6">
 			<?php 
 	        $title="Codes Sp&eacute;cifiques - ".$_GET['serv']." concern&eacute;";
 	        $pa=$_GET['serv'];
 	        $sens="conc";
-	        include 'temp/tablesCVT.php';?>
+	        include 'temp/tablesCvt.php';?>
 	     </div>       
 	</div>
 	<!-- /.row -->

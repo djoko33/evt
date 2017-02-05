@@ -1,6 +1,6 @@
 <?php
 //injecte dans la table cvt � la colonne index (tsvector(texte+titre))
-include('../connexionPG.php');// todo changer le chemin
+include('../modele/connexionPG.php');// todo changer le chemin
 $reponse = $bdd->query("SELECT reference, titre, texte FROM cvt");
 
 $value = array();

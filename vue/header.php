@@ -13,16 +13,16 @@
     <title><?php echo $pageTitle;?></title>
 
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="../assets/bootstrap-table/bootstrap-table.min.css">
-	<link rel="stylesheet" href="../assets/bootstrap-datepicker/css/bootstrap-datepicker.min.css" />
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../assets/bootstrap-table/bootstrap-table.min.css">
+	<link rel="stylesheet" href="../../assets/bootstrap-datepicker/css/bootstrap-datepicker.min.css" />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/vue.css" type="text/css">
+    <link rel="stylesheet" href="../css/vue.css" type="text/css">
     <!-- Custom Fonts -->
-    <link href="../assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!-- Quill Themes -->
-    <link href="../assets/css/quill.snow.css" rel="stylesheet">
-	<link href="../assets/css/quill.bubble.css" rel="stylesheet">
+    <link href="../../assets/css/quill.snow.css" rel="stylesheet">
+	<link href="../../assets/css/quill.bubble.css" rel="stylesheet">
 </head>
 
 <body>

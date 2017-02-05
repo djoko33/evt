@@ -54,7 +54,7 @@ function strBase($base)
 	if ($base=='3') {return "CID";}
 }
 
-include('connexionRexing.php');
+include('../modele/connexionRexing.php');
 $reponse = $bdd->query('SELECT numrex AS reference, titre, descri AS texte, auteur as emetteur, date as datecvt, notes as url, site, palier, base, type FROM rex WHERE numrex=\''.$_POST['fiche_ref'].'\'');
 //echo "<p>".$_POST['cvt_ref']."</p>";
 while ($donnees = $reponse->fetch())
@@ -87,7 +87,7 @@ $reponse->closeCursor();
 	<div class="row">
 	    <div class="col-lg-1">
 	        <p>
-  				<br><a href="main.php"><span class="glyphicon glyphicon-home logo-small"></span></a>
+  				<br><a href="../main.php"><span class="glyphicon glyphicon-home logo-small"></span></a>
 			</p>
 	    </div>
 	    <div class="col-lg-1">
@@ -180,7 +180,6 @@ $reponse->closeCursor();
     </div>    
 </div>
      
-</div>
 
 </body>
 </html>

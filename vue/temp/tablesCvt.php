@@ -1,5 +1,5 @@
 <?php 
-include_once "count.php";
+include_once '../modele/count.php';
 $serv=$_GET['serv'];
 $lstCodes=lstCodesPA($pa);
 $data=planAction($serv, $sens, $lstCodes)?>
@@ -26,8 +26,8 @@ $data=planAction($serv, $sens, $lstCodes)?>
     	echo '<tr id="tr-id-'.$i.'" class="tr-class-'.$i.'">
         <td id="td-id-'.$i.'" class="td-class-'.$i.'">'.$data[$i-1]["x"].'</td>
         <td>'.$data[$i-1]["nbTot"].'</td>
-        <td><a href="afficheTableConstatsServCode.php?serv_'.$sens.'='.$serv.'&nature=1&code='.$data[$i-1]["code"].'">'.$data[$i-1]["nbPos"].'</a></td>
-        <td><a href="afficheTableConstatsServCode.php?serv_'.$sens.'='.$serv.'&nature=0&code='.$data[$i-1]["code"].'">'.$data[$i-1]["nbNeg"].'</a></td>
+        <td><a href="../afficheTableConstatsServCode.php?serv_'.$sens.'='.$serv.'&nature=1&code='.$data[$i-1]["code"].'">'.$data[$i-1]["nbPos"].'</a></td>
+        <td><a href="../afficheTableConstatsServCode.php?serv_'.$sens.'='.$serv.'&nature=0&code='.$data[$i-1]["code"].'">'.$data[$i-1]["nbNeg"].'</a></td>
     </tr>';
     }
     

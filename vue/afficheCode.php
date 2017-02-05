@@ -26,7 +26,7 @@
     </style>
 <body>
 <?php
-include('connexion.php');
+include('../connexion.php');
 $reponse = $bdd->query('SELECT * FROM codification WHERE quad=\''.$_POST['quad'].'\'');
 while ($donnees = $reponse->fetch())
 {
@@ -56,7 +56,7 @@ $reponse->closeCursor();
 	   
         </div>
        
-		</br>
+		<br>
         <button type="submit" class="btn btn-primary">Enregistrer</button>
     </form>
 </div>

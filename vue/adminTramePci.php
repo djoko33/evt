@@ -16,7 +16,7 @@
 		    	margin: 20px;
 		    }
 		    .th {
-    text-align: left;
+ï¿½ï¿½ï¿½ text-align: left;
 		</style>
     </head>
    
@@ -30,10 +30,10 @@
 <div class="container">
 
 <?php
-	include('connexionPG.php');
+	include('../modele/connexionPG.php');
 	for ($i = 1; $i < 9; $i++)
 	{
-		// Récupération des codes PCI du MP
+		// Rï¿½cupï¿½ration des codes PCI du MP
 		$rep = $bdd->prepare('SELECT DISTINCT(code), titre FROM pci_fiches WHERE mp= ? ORDER BY code');
 		$rep->execute(array($i));
 		echo '
@@ -62,7 +62,7 @@
 	$rep->closeCursor();	
 ?>
    
- 
+</div> 
 
 </body>
 </html>

@@ -49,7 +49,7 @@
 	<div class="row">
 	    <div class="col-lg-1">
 	        <p>
-  				<br><a href="main.php"><span class="glyphicon glyphicon-home logo-small"></span></a>
+  				<br><a href="../index.php"><span class="glyphicon glyphicon-home logo-small"></span></a>
 			</p>
 	    </div>
 	    <div class="col-lg-1">
@@ -73,7 +73,7 @@
 	</div>	
 	<table id="tableCVT" data-toggle="table" 
        	data-url=<?php 
-       	include_once 'connexionPG.php';
+       	include_once '../modele/connexionPG.php';
        	//prepare un tableau de correspondance code 1er niveau / code 2ème niveau
        	$reponse = $bdd->query('SELECT * FROM codification');
        	$convert=array();
@@ -82,7 +82,7 @@
        		$convert[$donnees['quad']]=$donnees['code_nat'];
        	}
        	$reponse->closeCursor();
-       	echo '../ptirex2/jsonFrx.php?code='.$convert[$_GET['code']];
+       	echo '../modele/jsonFrx.php?code='.$convert[$_GET['code']];
        	?>
        	data-toolbar="#toolbar"    
 	    data-search="true"

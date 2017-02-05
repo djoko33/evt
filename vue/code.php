@@ -4,7 +4,7 @@ include_once 'session.php';
 
 $pageTitle="Exploitation Visites Terrain - CVT par Code";
 include_once 'header.php';
-include_once 'connexionPG.php';
+include_once '../modele/connexionPG.php';
 //prepare un tableau de correspondance code 1er niveau / code 2ème niveau
 $reponse = $bdd->query('SELECT * FROM codification');
 $convert=array();
@@ -27,22 +27,10 @@ $reponse->closeCursor();
 	    	<h1>Le trepied du REX</h1>
 		
 		</div>
-		<form action=<?php echo "\"vue/code.php?code=". $_SESSION["code"]."\""; ?> method="post" enctype="multipart/form-data">
-			<div class="col-lg-4">   
-				<br> 			
-					<div class="input-daterange input-group" id="datepicker">
-						<span class="input-group-addon">S&eacute;lection du </span>	    
-					    <input type="text" class="input form-control" data-provide="datepicker" name="debut" value=<?php echo $_SESSION["debut"] ?> data-date-format="yyyy-mm-dd" data-date-language="fr"/>
-					    <span class="input-group-addon">au</span>
-					    <input type="text" class="input form-control" data-provide="datepicker" name="fin" value=<?php echo $_SESSION["fin"] ?> data-date-format="yyyy-mm-dd" data-date-language="fr"/>
-						
-					</div>						
-			</div>
-			<div class="col-lg-2"> 
-				<br>  
-			    <input type="submit" class="btn btn-default" value="Rafraichir">
-			</div>
-		</form>
+		<?php 
+		$page="\"code.php?code=". $_SESSION["code"]."\"";
+		include_once 'temp/date.php';
+		?>	
 	</div>	    
   	<div class="page-header">
   		<h2>Observations Terrain <small>Les CVT avec le code <?php echo $_GET['code'];?></small></h2>
@@ -54,7 +42,7 @@ $reponse->closeCursor();
 			<?php 
 	        $title="Nb CVT - ".$_GET['code'];
 	        $id="nbCVT";
-	        $data_url="CVTparCodeTrim.php?code=".$_GET['code'];
+	        $data_url="../contr/cvtParCodeTrim.php?code=".$_GET['code'];
 	        $datafield="trim";
 	        $datafield_Header="Trimestre";
 	        include 'temp/tableComplete.php';?>
@@ -102,7 +90,7 @@ $reponse->closeCursor();
 		</div>
 		<div class="col-lg-9">
 			<table id="tableCVT" data-toggle="table" 
-		       	data-url=<?php echo '"jsonFrx.php?code='.$convert[$_GET['code']]."\"";?>
+		       	data-url=<?php echo '"../contr/jsonFrx.php?code='.$convert[$_GET['code']]."\"";?>
 		       	data-toolbar="#toolbar"    
 			    data-search="false"
 			    data-show-refresh="false"
@@ -142,7 +130,7 @@ $reponse->closeCursor();
 		</div>
 		<div class="col-lg-9">
 			<table id="tableCVT" data-toggle="table" 
-		       	data-url=<?php echo '"jsonCid.php?code='.$convert[$_GET['code']]."\"";?>
+		       	data-url=<?php echo '"../contr/jsonCid.php?code='.$convert[$_GET['code']]."\"";?>
 		       	data-toolbar="#toolbar"    
 			    data-search="false"
 			    data-show-refresh="false"
@@ -175,11 +163,11 @@ $reponse->closeCursor();
 
 <script>		
 	var code=getQuerystring('code');	
-	barGraph('serviceparCode.php?code='+code+'&sens=emet', "graphCodeEmet");
-	barGraph('serviceparCode.php?code='+code+'&sens=conc', "graphCodeConc");
-	barGraph('frxParCodeTrim.php?code='+code, "graphCodeFrx");
-	barGraph('cidParCodeTrim.php?code='+code, "graphCodeCid");
-	lineGraph('CVTparCode.php?code='+code, "graphCode", code);
+	barGraph('../contr/serviceParCode.php?code='+code+'&sens=emet', "graphCodeEmet");
+	barGraph('../contr/serviceParCode.php?code='+code+'&sens=conc', "graphCodeConc");
+	barGraph('../contr/frxParCodeTrim.php?code='+code, "graphCodeFrx");
+	barGraph('../contr/cidParCodeTrim.php?code='+code, "graphCodeCid");
+	lineGraph('../contr/cvtParCode.php?code='+code, "graphCode", code);
 
 	$(function() 
 			 {  

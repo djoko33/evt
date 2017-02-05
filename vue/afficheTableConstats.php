@@ -4,22 +4,22 @@
         <meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=9">
         <title>Affiche une table de CVT</title>
-	    <script src="../assets/js/jquery-2.2.3.min.js"></script>
-		<script src="../assets/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
-		<script src="../assets/bootstrap/js/bootstrap.min.js"></script>
-		<script src="../assets/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
-		<script src="../assets/bootstrap-table/bootstrap-table.min.js"></script>
-		<script src="../assets/bootstrap-table/extensions/export/bootstrap-table-export.min.js"></script>
-		<script type="text/javascript" src="../assets/tableExport/tableExport.min.js"></script>
-		<script type="text/javascript" src="../assets/tableExport/libs/FileSaver/FileSaver.min.js"></script> 
-		<script type="text/javascript" src="../assets/tableExport/libs/jsPDF/jspdf.min.js"></script> 
-		<script type="text/javascript" src="../assets/tableExport/libs/jsPDF-AutoTable/jspdf.plugin.autotable.js"></script> 
-		<script type="text/javascript" src="../assets/tableExport/libs/html2canvas/html2canvas.min.js"></script>
-		<link rel="stylesheet" href="../assets/bootstrap-datepicker/css/bootstrap-datepicker.min.css" />
-		<link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" href="../assets/bootstrap/css/bootstrap-theme.min.css">
-		<link rel="stylesheet" href="../assets/bootstrap-select/dist/css/bootstrap-select.min.css">
-    	<link rel="stylesheet" href="../assets/bootstrap-table/bootstrap-table.min.css">
+	    <script src="../../assets//js/jquery-2.2.3.min.js"></script>
+		<script src="../../assets//bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+		<script src="../../assets//bootstrap/js/bootstrap.min.js"></script>
+		<script src="../../assets//bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+		<script src="../../assets//bootstrap-table/bootstrap-table.min.js"></script>
+		<script src="../../assets//bootstrap-table/extensions/export/bootstrap-table-export.min.js"></script>
+		<script type="text/javascript" src="../../assets//tableExport/tableExport.min.js"></script>
+		<script type="text/javascript" src="../../assets//tableExport/libs/FileSaver/FileSaver.min.js"></script> 
+		<script type="text/javascript" src="../../assets//tableExport/libs/jsPDF/jspdf.min.js"></script> 
+		<script type="text/javascript" src="../../assets//tableExport/libs/jsPDF-AutoTable/jspdf.plugin.autotable.js"></script> 
+		<script type="text/javascript" src="../../assets//tableExport/libs/html2canvas/html2canvas.min.js"></script>
+		<link rel="stylesheet" href="../../assets//bootstrap-datepicker/css/bootstrap-datepicker.min.css" />
+		<link rel="stylesheet" href="../../assets//bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../../assets//bootstrap/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="../../assets//bootstrap-select/dist/css/bootstrap-select.min.css">
+    	<link rel="stylesheet" href="../../assets//bootstrap-table/bootstrap-table.min.css">
 
     </head>
     <style>
@@ -41,29 +41,29 @@
 <?php 
        	if (isset($_GET['serv_conc']))
        		{	$title= "Service concern&eacute; = ".$_GET['serv_conc'];
-       			$urlBack="vueService.php?serv=".$_GET['serv_conc'];}
+       			$urlBack="service.php?serv=".$_GET['serv_conc'];}
        	elseif (isset($_GET['serv_emet']))
        		{	$title= "Service &eacute;metteur = ".$_GET['serv_emet'];
-       			$urlBack="vueService.php?serv=".$_GET['serv_emet'];}
+       			$urlBack="service.php?serv=".$_GET['serv_emet'];}
        	elseif (isset($_GET['sp']))
        		{	$title= "Sous Processus = ".$_GET['sp'];
-       			$urlBack="vueSP.php?sp=".$_GET['sp'];}   
+       			$urlBack="sp.php?sp=".$_GET['sp'];}   
        	elseif (isset($_GET['pci']))
        			{	$title= "Code PCI = ".$_GET['pci'];
-       			$urlBack="vueSiteTdb?mp=0";}
+       			$urlBack="siteTdb?mp=0";}
        	elseif (isset($_GET['keyword']))
        			{	$title= "Mot cl&eacute; ".$_GET['keyword'];
-       			$urlBack="vueMot.php";}
+       			$urlBack="mot.php";}
        	else 
        		{	$title= "Code = ".$_GET['code'];
-       			$urlBack="vueCode.php?code=".$_GET['code'];
+       			$urlBack="code.php?code=".$_GET['code'];
        		}
        	?>
 <div class="container">
 	<div class="row">
 	    <div class="col-lg-1">
 	        <p>
-  				<br><a href="main.php"><span class="glyphicon glyphicon-home logo-small"></span></a>
+  				<br><a href="../index.php"><span class="glyphicon glyphicon-home logo-small"></span></a>
 			</p>
 	    </div>
 	    <div class="col-lg-1">
@@ -88,25 +88,25 @@
 	<table id="tableCVT" data-toggle="table" 
        	data-url=<?php 
        	if (isset($_GET['serv_conc']))
-       		{echo 'jsonCVT.php?serv_conc='.$_GET['serv_conc']."&nature=".$_GET['nature'];}
+       		{echo '../modele/jsonCvt.php?serv_conc='.$_GET['serv_conc']."&nature=".$_GET['nature'];}
        	elseif (isset($_GET['serv_emet']))
-       		{echo 'jsonCVT.php?serv_emet='.$_GET['serv_emet']."&nature=".$_GET['nature'];}
+       		{echo '../modele/jsonCvt.php?serv_emet='.$_GET['serv_emet']."&nature=".$_GET['nature'];}
        	elseif (isset($_GET['sp']))
-       		{echo 'jsonCVT.php?sp='.$_GET['sp']."&nature=".$_GET['nature'];}
+       		{echo '../modele/jsonCvt.php?sp='.$_GET['sp']."&nature=".$_GET['nature'];}
        	elseif (isset($_GET['pci']))
-       		{echo 'jsonCVT.php?pci='.$_GET['pci'];}
+       		{echo '../modele/jsonCvt.php?pci='.$_GET['pci'];}
        	elseif (isset($_GET['keyword']))
        		{
        			$kw=str_replace("&", "%26",$_GET['keyword']);
        			$kw=str_replace(" ", "",$kw);
-       			echo 'jsonCVT.php?keyword='.$kw;}
+       			echo '../modele/jsonCvt.php?keyword='.$kw;}
 		elseif (isset($_GET['keywordPtiRex']))
        		{
        			$kw=str_replace("&", "%26",$_GET['keywordPtiRex']);
        			$kw=str_replace(" ", "",$kw);
-       			echo 'jsonCVT.php?keywordPtiRex='.$kw;}
+       			echo '../modele/jsonCvt.php?keywordPtiRex='.$kw;}
        	else 
-       		{echo 'jsonCVT.php?code='.$_GET['code']."&nature=".$_GET['nature'];}
+       		{echo '../modele/jsonCvt.php?code='.$_GET['code']."&nature=".$_GET['nature'];}
        	?>
        	data-toolbar="#toolbar"    
 	    data-search="true"

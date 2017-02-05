@@ -31,7 +31,7 @@ include_once 'header.php';
 		</div>
 
 		<?php 
-		$page="vue/serviceTdB.php?serv=". $_SESSION["serv"];
+		$page="serviceTdB.php?serv=". $_SESSION["serv"];
 		include_once 'temp/date.php';
 		?>		
 	</div>
@@ -41,7 +41,7 @@ include_once 'header.php';
 			<?php 
 	        $title="PCI - ".$_GET['serv'];
 	        $id="nbPciEmet";
-	        $data_url="CvtPciTdbEmet.php?serv=".$_GET['serv'];
+	        $data_url="../contr/cvtPciTdbEmet.php?serv=".$_GET['serv'];
 	        $datafield1="class";
 	        $datafield1_Header="Code PCI";
 	        $datafield2="emet";
@@ -63,7 +63,7 @@ include_once 'header.php';
 			<?php 
 	        $title="Nb CVT - ".$_GET['serv']." &eacute;metteur - PCI + PPT";
 	        $id="nbCVT";
-	        $data_url="CvtTdbEmet.php?serv=".$_GET['serv'];
+	        $data_url="../contr/cvtTdbEmet.php?serv=".$_GET['serv'];
 	        $datafield1="emet";
 	        $datafield1_Header="Emetteur";
 	        $datafield2="nb";
@@ -74,7 +74,7 @@ include_once 'header.php';
 			<?php 
 			$id="nbPci";
 	        $title="PCI - ".$_GET['serv'];
-	        $data_url="CvtPciTdb.php?serv=".$_GET['serv'];
+	        $data_url="../contr/cvtPciTdb.php?serv=".$_GET['serv'];
 	        $datafield1="class";
 	        $datafield1_Header="Code PCI";
 	        $datafield2="nb";
