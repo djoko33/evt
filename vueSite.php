@@ -140,8 +140,15 @@ var toolbarOptions = [
 	graph('codeparSite.php?pa=nqme', "nqme");
 	graph('codeparSite.php?pa=surete', "surete");
 	lineGraphSite('CVTparSite.php', 'cvtparmois');
-	barGraphXY('cvtParEmet.php?type=em', 'cvtparemetEm', 'nb CVT');
-	barGraphXY('cvtParEmet.php?type=cds', 'cvtparemetCds', 'nb CVT');
+
+	<?php 
+	$d=strtotime($_SESSION["debut"]);
+	$f=strtotime($_SESSION["fin"]);
+	$cibleCds="'".ceil(($f-$d)*48/(365*24*3600))."'";
+	$cibleEm="'".ceil(($f-$d)*36/(365*24*3600))."'";
+	?>
+	barGraphXYMix('cvtParEmet.php?type=em', 'cvtparemetEm', 'nb CVT',<?php echo $cibleEm;?>);
+	barGraphXYMix('cvtParEmet.php?type=cds', 'cvtparemetCds', 'nb CVT',<?php echo $cibleCds;?>);
 
 	<?php 
 			include "codeparSiteMois.php";
@@ -149,7 +156,7 @@ var toolbarOptions = [
 			$nqme=array("EM01", "EM02", "EM06", "EM08", "EM09", "EM17", "EM19", "OM11", "PH05");
 			$surete=array("EM05", "EM08", "EM13", "MA14", "SN01", "SN03", "SN14", "SN16");
 			//TODO : debugger le $tab dans count.php
-			$tab=array("2016-01", "2016-02", "2016-03",  "2016-04", "2016-05", "2016-06", "2016-07", "2016-08", "2016-09", "2016-10",  "2016-11", "2016-12");
+			$tab=array("2016-01", "2016-02", "2016-03",  "2016-04", "2016-05", "2016-06", "2016-07", "2016-08", "2016-09", "2016-10",  "2016-11", "2016-12", "2017-01");
 			$r=tabPA($nqme, $tab);//tabAnneeMois(2016, 1, 2016, 8));
 
 			$strtabMois="[\"";

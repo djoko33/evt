@@ -200,23 +200,37 @@ function graph(jsondata, idGraph){
 	        });
 	    });
 	}
-	function barGraphXY(jsondata, idGraph, leg){
+	function barGraphXYMix(jsondata, idGraph, leg, cible){
 		var promise = $.getJSON(jsondata);
 		Chart.defaults.global.defaultFontSize= 8;
 		promise.done(function(data) {
 			var tot=[];
 			var lab=[];
+			var c=[]
 			  $.each(data, function(entryIndex, entry) {
 				tot.push(parseInt(entry.y));				
-				lab.push(entry.x);});
+				lab.push(entry.x);
+				c.push(parseInt(cible));});
+				
 	    var barChartData = {
 	        labels: lab,
 	        datasets: 
 	        [{
-	            label: leg,
+	        	type: 'bar',
+	        	label: leg,
 	            backgroundColor: "rgba(0,91,187,1)",
 	            data: tot
-	        }]
+	        },
+	        {
+	        	type: 'line',
+	        	label: leg,
+	            backgroundColor: "rgba(80,158,47,1)",
+	            pointRadius: 0,
+	            borderColor: "rgba(80,158,47,1)",
+	            borderDash: [4,2],
+	            fill: false,
+	            data: c
+	        },]
 	    }
        	
 	    var ctx = document.getElementById(idGraph).getContext("2d");
@@ -245,7 +259,10 @@ function graph(jsondata, idGraph){
 	                        stacked: true,
 	                    }],
 	                    yAxes: [{
-	                        stacked: true
+	                        stacked: false,
+	                        ticks: {
+	                        	beginAtZero : true
+	                        }
 	                    }]
 	                }
 	            }
