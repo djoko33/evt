@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'countTdB.php';
+include '../modele/countTdb.php';
 $serv=$_GET['serv'];
 echo json_encode(countNbPci($serv));
 ?>

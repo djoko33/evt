@@ -1,6 +1,6 @@
 <?php
 
-include 'count.php';
+include '../modele/count.php';
 
 function tabPA($pa, $tabMois){
 	$result=array();
@@ -18,7 +18,7 @@ function tabPA($pa, $tabMois){
 				unset($result[$c][$m]);
 			}
 		}
-		//remplit les mois vides (non intercalaires car déjà traités par CountCodes)
+		//remplit les mois vides (non intercalaires car dï¿½jï¿½ traitï¿½s par CountCodes)
 		foreach ($tabMois as $m)
 		{
 			if (!isset($result[$c][$m]))

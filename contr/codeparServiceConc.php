@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'count.php';
+include '../modele/count.php';
 $nqme=array("EM01", "EM02", "EM06", "EM08", "EM09", "EM17", "EM19", "OM11", "PH05");
 $surete=array("EM01");
 $pa=array("nqme"=>$nqme, "surete"=>$surete);

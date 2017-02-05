@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'count.php';
+include '../modele/count.php';
 $code=$_GET['code'];
 echo json_encode(countCodeParTrim($code));
 ?>
