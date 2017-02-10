@@ -165,7 +165,7 @@ function actionFormatter(value, row, index) {
     if (row[0].substr(0,3)== 'CVT') 
 	{
 	return [
-        '<form class="form-horizontal" action="afficheCVT.php" method="post"><input type="submit" class="btn btn-info" name="cvt_ref" value="'+row[0]+'"></form>'
+        '<form class="form-horizontal" action="afficheCvt.php" method="post"><input type="submit" class="btn btn-info" name="cvt_ref" value="'+row[0]+'"></form>'
     ].join('');
 	} else
 	{	return [

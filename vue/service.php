@@ -210,12 +210,12 @@ include_once 'header.php';
 
 	
 	var service=getQuerystring('serv');	
-	graph('../contr/codeparService.php?serv='+service+'&pa=MQME&sens=conc', "NqmeConc");
-	graph('../contr/codeparService.php?serv='+service+'&pa=MQME&sens=emet', "NqmeEmet");
-	graph('../contr/codeparService.php?serv='+service+'&pa=surete&sens=conc', "SurConc");
-	graph('../contr/codeparService.php?serv='+service+'&pa=surete&sens=emet', "SurEmet");
-	graph('../contr/codeparService.php?serv='+service+'&pa='+service+'&sens=conc', "ServConc");
-	graph('../contr/codeparService.php?serv='+service+'&pa='+service+'&sens=emet', "ServEmet");
+	graph('../contr/codeParService.php?serv='+service+'&pa=MQME&sens=conc', "NqmeConc");
+	graph('../contr/codeParService.php?serv='+service+'&pa=MQME&sens=emet', "NqmeEmet");
+	graph('../contr/codeParService.php?serv='+service+'&pa=surete&sens=conc', "SurConc");
+	graph('../contr/codeParService.php?serv='+service+'&pa=surete&sens=emet', "SurEmet");
+	graph('../contr/codeParService.php?serv='+service+'&pa='+service+'&sens=conc', "ServConc");
+	graph('../contr/codeParService.php?serv='+service+'&pa='+service+'&sens=emet', "ServEmet");
 
 	$(function() 
 			 {  

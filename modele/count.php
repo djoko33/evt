@@ -311,8 +311,8 @@ function countServConc($servEmet)
 	$lstServConc=$bdd->prepare("SELECT serv_conc, COUNT(*) AS nb FROM cvt WHERE serv_emet=? AND (datecvt BETWEEN ? AND ?) GROUP BY serv_conc ORDER BY nb DESC LIMIT 6");
 	$lstServConc->execute(array($servEmet, $_SESSION["debut"], $_SESSION["fin"]));
 	
-	$nbCVT=$bdd->prepare("SELECT COUNT(*) AS nb FROM cvt WHERE serv_emet=?");
-	$nbCVT->execute(array($servEmet));
+	$nbCVT=$bdd->prepare("SELECT COUNT(*) AS nb FROM cvt WHERE serv_emet=? AND (datecvt BETWEEN ? AND ?)");
+	$nbCVT->execute(array($servEmet, $_SESSION["debut"], $_SESSION["fin"]));
 	$tot=$nbCVT->fetchall();
 	while ($nb = $lstServConc->fetch())
 	{

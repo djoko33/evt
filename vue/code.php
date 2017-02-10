@@ -73,7 +73,7 @@ $reponse->closeCursor();
 		</div>
 
 	    <div class="col-lg-3">
-	    	<a class="btn btn-default" href="<?php echo "afficheTableConstats.php?code=".$_GET['code']."&nature=0"; ?>"> D&eacute;tails CVT Positifs</a>
+	    	<a class="btn btn-default" href="<?php echo "afficheTableConstats.php?code=".$_GET['code']."&nature=1"; ?>"> D&eacute;tails CVT Positifs</a>
 	    </div>
     </div>
 	<!-- /.row -->
@@ -90,7 +90,7 @@ $reponse->closeCursor();
 		</div>
 		<div class="col-lg-9">
 			<table id="tableCVT" data-toggle="table" 
-		       	data-url=<?php echo '"../contr/jsonFrx.php?code='.$convert[$_GET['code']]."\"";?>
+		       	data-url=<?php echo '"../modele/jsonFrx.php?code='.$convert[$_GET['code']]."\"";?>
 		       	data-toolbar="#toolbar"    
 			    data-search="false"
 			    data-show-refresh="false"
@@ -130,7 +130,7 @@ $reponse->closeCursor();
 		</div>
 		<div class="col-lg-9">
 			<table id="tableCVT" data-toggle="table" 
-		       	data-url=<?php echo '"../contr/jsonCid.php?code='.$convert[$_GET['code']]."\"";?>
+		       	data-url=<?php echo '"../modele/jsonCid.php?code='.$convert[$_GET['code']]."\"";?>
 		       	data-toolbar="#toolbar"    
 			    data-search="false"
 			    data-show-refresh="false"

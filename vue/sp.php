@@ -70,9 +70,9 @@ include_once 'header.php';
 <?php include('footer.php');?>
 <script>	
 	var sp=getQuerystring('sp');	
-	barGraph('../contr/serviceparSp.php?sp='+sp+'&sens=emet', "graphSPEmet");
-	barGraph('../contr/serviceparSp.php?sp='+sp+'&sens=conc', "graphSPConc");
-	lineGraph('../contr/CvtparSp.php?sp='+sp, "graphSP", sp);
+	barGraph('../contr/serviceParSp.php?sp='+sp+'&sens=emet', "graphSPEmet");
+	barGraph('../contr/serviceParSp.php?sp='+sp+'&sens=conc', "graphSPConc");
+	lineGraph('../contr/cvtParSp.php?sp='+sp, "graphSP", sp);
 
 	$(function() 
 			 {  
