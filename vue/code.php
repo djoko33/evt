@@ -150,7 +150,7 @@ $reponse->closeCursor();
 			    <thead>
 				    <tr>
 				        <th data-field="titre" data-align="left">Titre</th>
-				        <th data-field="service" data-align="center">Site</th>
+				        <th data-field="site" data-align="center">Site</th>
 				        <th data-formatter="actionFormatter" data-events="actionEvents">Reference</th>
 				    </tr>
 			    </thead>
