@@ -13,7 +13,7 @@ var toolbarOptions = [
                       ['clean']                                         // remove formatting button
                     ];
 
-function graph(jsondata, idGraph){
+function graph(jsondata, idGraph, urlConstats){
 		Chart.defaults.global.defaultFontSize=8;
 		var promise = $.getJSON(jsondata);
 		promise.done(function(data) {
@@ -39,15 +39,16 @@ function graph(jsondata, idGraph){
 	    }
        	
 	    var ctx = document.getElementById(idGraph).getContext("2d");
-	    window.myBar = new Chart(ctx, {
+	    window[idGraph] = new Chart(ctx, {
 	            type: 'bar',
 	            data: barChartData,
 	            options: 
 	            {
+	            	onClick: graphClickEvent,
 	            	maintainAspectRatio: false,
 	            	title:{
 	                    display:false,
-	                    text:""
+	                    text:urlConstats
 	                },
 	    			legend: {
             			display: false
@@ -69,10 +70,42 @@ function graph(jsondata, idGraph){
 	                }
 	            }
 	        });
+    
+	    
 	    });
 	}
 	
-	
+function graphClickEvent(event){
+	var activePoints = this.getElementsAtEvent(event);
+    if(activePoints.length > 0)
+    {
+      var x = activePoints[0];
+      var y = activePoints[1];
+      var len=activePoints.length;
+      var labelx = this.data.labels[x._index];
+      var valuex = this.data.datasets[x._datasetIndex].data[x._index];
+      var naturex = this.data.datasets[x._datasetIndex].label;
+      var labely = this.data.labels[y._index];
+      var valuey = this.data.datasets[y._datasetIndex].data[y._index];
+      var naturey = this.data.datasets[y._datasetIndex].label;
+      var url = this.options.title.text;
+      var nature = convertNature(naturey);
+      var code=convertCode(labelx);
+      window.location.replace(url+'&code='+code);
+    }}
+
+function convertNature(nature)
+	{
+		if (nature=='Positif'){return 1;} else {return 0;}
+	}
+
+function convertCode(code)
+	{
+		var codification={};
+		codification= { AAR:'SN01', N3C:'SN14', CT:'EM08', Prepa:'EM06', EP:'EM13'};
+		return (codification[code]);
+	}
+    
 	function getQuerystring(key, default_)
 	 {
 	   if (default_==null) default_=""; 
