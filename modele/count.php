@@ -344,15 +344,28 @@ function countServEmet($servConc)
 function countCvtEmis($type) {
 	include('connexionPG.php');
 	$result=array();
+	$emet=array();
+	//cree un tableau avec tous les noms
+	$lst=$bdd->prepare("SELECT nom FROM emetteur WHERE type=?");
+	$lst->execute(array($type));
+	while ($x = $lst->fetch())
+	{
+		array_push($emet, $x[0]);
+	}
+	//cree un tableau avec tous les noms ayant émis au moins 1 constat
 	$lst=$bdd->prepare("SELECT cvt.emetteur, COUNT(cvt.emetteur) FROM cvt INNER JOIN emetteur ON (emetteur.type=?) AND (emetteur.nom=cvt.emetteur) AND (cvt.datecvt BETWEEN ? AND ?)GROUP BY cvt.emetteur ORDER BY cvt.emetteur");
 	$lst->execute(array($type, $_SESSION["debut"], $_SESSION["fin"]));
 	while ($x = $lst->fetch())
 	{
 		array_push($result, array("x"=>$x[0], "y"=>$x[1]));
 	}
+	//complete avec 0 les autres noms
+	$emetZero=array_diff($emet, array_column($result, 'x'));
+	foreach ($emetZero as $e) {
+		array_push($result, array("x"=>$e, "y"=>0));		
+	}
 	return $result;
 }
-
 
 
 function top10($serv, $sens)
