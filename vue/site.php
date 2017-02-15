@@ -1,5 +1,6 @@
 <?php
 session_start();
+$_SESSION["fin"]=date("Y-m-d",strtotime("now"));
 include_once 'session.php';
 
 $pageTitle="Exploitation Visites Terrain - RMPAC-M";
@@ -59,7 +60,7 @@ $reponse->closeCursor();?>
 		</div>
 		<div class="col-lg-6">
 	        <?php 
-	        $title="Top 10 ";
+	        $title="Top 10 sur les 12 derniers mois";
 	        $id="nbCVT";
 	        $data_url="../contr/top10Site.php";
 	        $datafield="code";
@@ -86,13 +87,13 @@ $reponse->closeCursor();?>
 	<div class="row">
 	    <div class="col-lg-6">
 	        <?php 
-	        $title="S&ucirc;ret&eacute; ";
+	        $title="S&ucirc;ret&eacute; sur les 12 derniers mois";
 	        $id="surete";
 	        include 'temp/barGraph.php';?>
 		</div>
 		<div class="col-lg-6">
 			<?php 
-	        $title="NQME";
+	        $title="NQME sur les 12 derniers mois";
 	        $id="nqme";
 	        include 'temp/barGraph.php';?>	    	
 	     </div>       
@@ -101,13 +102,13 @@ $reponse->closeCursor();?>
 	<div class="row">
 	    <div class="col-lg-6">
 	        <?php 
-	        $title="S&ucirc;ret&eacute; ";
+	        $title="S&ucirc;ret&eacute; sur les 12 derniers mois ";
 	        $id="lineSurete";
 	        include 'temp/lineChart.php';?>
 		</div>
 		<div class="col-lg-6">
 			<?php 
-	        $title="NQME";
+	        $title="NQME sur les 12 derniers mois";
 	        $id="lineNQME";
 	        include 'temp/lineChart.php';?>	    	
 	     </div>       
@@ -118,62 +119,66 @@ $reponse->closeCursor();?>
 
 <script src="../../assets/js/quill.js"></script>
 <script>
-var toolbarOptions = [
-                      ['bold', 'italic', 'underline'],        // toggled buttons
-                      [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-                      [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
-                      [{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
-                      [{ 'align': [] }],
 
-                      ['clean']                                         // remove formatting button
-                    ];
+function createConfig(donnees) {
+    return {
+	type: 'line',
+	data: donnees,
+	options: 
+	{
+		title:{
+			display:false,
+			text:""
+		},
+		legend: {
+			display: true,
+			fullWidth : true,
+			position : 'bottom',
+			labels: {boxWidth: 10}
+		},		    			    			
+		tooltips: {mode: 'label'},
+		animation: {duration: 0},
+		responsive: true,
+		scales: {
+			xAxes: [{}],
+			yAxes: [{stacked: false}]
+		}
+	}};
+}
 
-                    var quill = new Quill('#comment', {
-                      modules: {
-                        toolbar: toolbarOptions
-                      },
-                      theme: 'snow'
-                    });
-	
-	
-	
-	graph('../contr/codeParSite.php?pa=nqme', "nqme");
-	graph('../contr/codeParSite.php?pa=surete', "surete");
-	lineGraphSite('../contr/cvtParSite.php', 'cvtparmois');
 
-	<?php 
-	$d=strtotime($_SESSION["debut"]);
+<?php 
 	$f=strtotime($_SESSION["fin"]);
+	$_SESSION["debutAnnee"]=date("Y-m-d", mktime(0,0,0,1,1,date("Y", $f)));//1er janvier de l'année de fin
+	$d=strtotime($_SESSION["debutAnnee"]);
+	//calcul les cibles de VT
 	$cibleCds="'".ceil(($f-$d)*48/(365*24*3600))."'";
 	$cibleEm="'".ceil(($f-$d)*36/(365*24*3600))."'";
-	?>
-	barGraphXYMix('../contr/cvtParEmet.php?type=em', 'cvtparemetEm', 'nb CVT',<?php echo $cibleEm;?>);
-	barGraphXYMix('../contr/cvtParEmet.php?type=cds', 'cvtparemetCds', 'nb CVT',<?php echo $cibleCds;?>);
+	
+	
+?>
+barGraphXYMix('../contr/cvtParEmet.php?type=em', 'cvtparemetEm', 'nb CVT',<?php echo $cibleEm;?>);
+barGraphXYMix('../contr/cvtParEmet.php?type=cds', 'cvtparemetCds', 'nb CVT',<?php echo $cibleCds;?>);	
 
 	<?php 
 			include "../contr/codeParSiteMois.php";
 			global $libCodes;
-			$nqme=array("EM01", "EM02", "EM06", "EM08", "EM09", "EM17", "EM19", "OM11", "PH05");
-			$surete=array("EM05", "EM08", "EM13", "MA14", "SN01", "SN03", "SN14", "SN16");
-			//TODO : debugger le $tab dans count.php
-			$tab=array("2016-01", "2016-02", "2016-03",  "2016-04", "2016-05", "2016-06", "2016-07", "2016-08", "2016-09", "2016-10",  "2016-11", "2016-12", "2017-01");
-			$r=tabPA($nqme, $tab);//tabAnneeMois(2016, 1, 2016, 8));
-
-			$strtabMois="[\"";
-			foreach (array_keys($r[$nqme[0]]) as $m) {
-				$strtabMois=$strtabMois.$m."\", \"";
+			//les 12 derniers mois
+			$_SESSION["debut"]=date("Y-m-d", strtotime("-12 month", strtotime($_SESSION["fin"])));
+			
+			$nqme=lstCodesPA('MQME');
+			$surete=lstCodesPA('surete');
+			
+			$t=tabMois(12);
+			$strTabData=tabDonnnesJs($nqme, $t);
+			
+			//creation de labels ["yyyy-mm", "yyyy-mm"...]
+			$labels="[\"";
+			foreach ($t as $value) {
+				$labels.=$value."\", \"";
 			}
-			$strtabMois=substr($strtabMois,0 ,-3)."]";
-			$strTabData=array();
-			$i=0;
-			foreach ($nqme as $c) {
-				$strData="[";
-				foreach (array_values($r[$nqme[$i]]) as $d) {
-					$strData=$strData.$d.", ";
-				}
-				$strTabData[$i]=substr($strData,0 ,-2)."]";
-				$i+=1;
-			}
+			$labels=substr($labels,0 ,-3)."]";
+			
 			$color[0]="\"rgba(80,158,47,1)\"";
 			$color[1]="\"rgba(254,88,21,1)\"";
 			$color[2]="\"rgba(255,160,47,1)\"";
@@ -184,12 +189,22 @@ var toolbarOptions = [
 			$color[7]="\"rgba(117,120,123,1)\"";
 			$color[8]="\"rgba(117,120,123,1)\"";
 			$color[9]="\"rgba(117,120,123,1)\"";
+			$color[10]="\"rgba(80,158,47,1)\"";
+			$color[11]="\"rgba(254,88,21,1)\"";
+			$color[12]="\"rgba(255,160,47,1)\"";
+			$color[13]="\"rgba(9,53,122,1)\"";
+			$color[14]="\"rgba(196,214,0,1)\"";
+			$color[15]="\"rgba(0,91,187,1)\"";
+			$color[16]="\"rgba(117,120,123,1)\"";
+			$color[17]="\"rgba(117,120,123,1)\"";
+			$color[18]="\"rgba(117,120,123,1)\"";
+			$color[19]="\"rgba(117,120,123,1)\"";
 			
 
 			?>
 
-			    var ChartData = {
-			        labels: <?php echo $strtabMois?>,
+			    var chartData = {
+			        labels: <?php echo $labels?>,
 			        datasets:
 			         
 			        [<?php 
@@ -214,84 +229,26 @@ var toolbarOptions = [
 			            lineTension: 0,
 			            fill: false,
 			            data: ".$strTabData[$max-1]."
-			        }";
+			        }";// le dernier n'a pas de virgule à la fin !
 			        ?>]
 			    };
 				
 				var ctx = document.getElementById('lineNQME').getContext("2d");
-				window.myLine = new Chart(ctx, 
-						{
-				            type: 'line',
-				            data: ChartData,
-				            options: 
-				            {
-				                title:{
-				                    display:false,
-				                    text:""
-				                },
-				    			legend: {
-			            			display: true,
-			            			fullWidth : true,
-			            			position : 'bottom',
-			            			labels: {
-					    				boxWidth: 10}
-				    			},
-				    			
-				                tooltips: {
-				                    mode: 'label'
-				                },
-				                animation: {
-					                duration: 0},
-				                responsive: true,
-				                scales: 
-				                {
-				                    xAxes: [{
+				var config=createConfig(chartData);
+				var nqme = new Chart(ctx, config);
+						
 
-				                    }],
-				                    yAxes: [{
-				                        stacked: false
-				                    }]
-				                }
-				            }
-				        });
 
 				<?php 
 				//TODO : factoriser les 2 graphes
 						//include "codeparSiteMois.php";
-						$surete=array("EM05", "EM08", "EM13", "MA14", "SN01", "SN03", "SN14", "SN16");
-						$tab=array("2016-01", "2016-02", "2016-03",  "2016-04", "2016-05", "2016-06", "2016-07", "2016-08", "2016-09", "2016-10",  "2016-11", "2016-12");
-						$r=tabPA($surete, $tab);//tabAnneeMois(2015, 5, 2016, 8));
-
-						$strtabMois="[\"";
-						foreach (array_keys($r[$surete[0]]) as $m) {
-							$strtabMois=$strtabMois.$m."\", \"";
-						}
-						$strtabMois=substr($strtabMois,0 ,-3)."]";
-						$strTabData=array();
-						$i=0;
-						foreach ($surete as $c) {
-							$strData="[";
-							foreach (array_values($r[$surete[$i]]) as $d) {
-								$strData=$strData.$d.", ";
-							}
-							$strTabData[$i]=substr($strData,0 ,-2)."]";
-							$i+=1;
-						}
-						$color[0]="\"rgba(80,158,47,1)\"";
-						$color[1]="\"rgba(254,88,21,1)\"";
-						$color[2]="\"rgba(255,160,47,1)\"";
-						$color[3]="\"rgba(9,53,122,1)\"";
-						$color[4]="\"rgba(196,214,0,1)\"";
-						$color[5]="\"rgba(0,91,187,1)\"";
-						$color[6]="\"rgba(117,120,123,1)\"";
-						$color[7]="\"rgba(117,120,123,1)\"";
-						$color[8]="\"rgba(117,120,123,1)\"";
-						$color[9]="\"rgba(117,120,123,1)\"";
+						$strTabData=tabDonnnesJs($surete, $t);
+						
 						
 						?>
 
-						    var ChartData = {
-						        labels: <?php echo $strtabMois?>,
+						    var chartData = {
+						        labels: <?php echo $labels?>,
 						        datasets:
 						         
 						        [<?php 
@@ -321,53 +278,13 @@ var toolbarOptions = [
 						    };
 							
 							var ctx = document.getElementById('lineSurete').getContext("2d");
-							window.myLine = new Chart(ctx, 
-									{
-							            type: 'line',
-							            data: ChartData,
-							            options: 
-							            {
-							                title:{
-							                    display:false,
-							                    text:""
-							                },
-							                legend: {
-						            			display: true,
-						            			fullWidth : true,
-						            			position : 'bottom',
-						            			labels: {
-								    				boxWidth: 10}
-							    			},
-							                tooltips: {
-							                    mode: 'label'
-							                },
-							                animation: {
-								                duration: 0},
-							                responsive: true,
-							                scales: 
-							                {
-							                    xAxes: [{
+							var config=createConfig(chartData);
+							var surete = new Chart(ctx, config);
 
-							                    }],
-							                    yAxes: [{
-							                        stacked: false
-							                    }]
-							                }
-							            }
-							        });
-
-
-
-
-
-
-
-
-	
-	$(function() 
-			 {  
-			 $(".tooltip-link").tooltip(); 
-			 }); 
+							graph('../contr/codeParSite.php?pa=nqme', "nqme");
+							graph('../contr/codeParSite.php?pa=surete', "surete");
+							lineGraphSite('../contr/cvtParSite.php', 'cvtparmois');
+							
 </script>
 </body>
 

@@ -235,7 +235,7 @@ function countCode($code, $nat1, $nat2) {
 	}
 	// remplit les mois intercalaires vides par des z�ros ou renvoie NULL (utile pour graphiques chronologiques)
 	if ($result!=NULL) {		
-	$tabMoisComplet=tabAnneeMois(2015, 1, 2016, 12);
+	$tabMoisComplet=tabAnneeMois(2015, 1, 2019, 12);//todo à rendre parametrable
 	$tabMois=array_keys($result);
 	$debut=array_search($tabMois[0], $tabMoisComplet);
 	$fin=array_search($tabMois[count($tabMois)-1], $tabMoisComplet);
@@ -354,7 +354,7 @@ function countCvtEmis($type) {
 	}
 	//cree un tableau avec tous les noms ayant émis au moins 1 constat
 	$lst=$bdd->prepare("SELECT cvt.emetteur, COUNT(cvt.emetteur) FROM cvt INNER JOIN emetteur ON (emetteur.type=?) AND (emetteur.nom=cvt.emetteur) AND (cvt.datecvt BETWEEN ? AND ?)GROUP BY cvt.emetteur ORDER BY cvt.emetteur");
-	$lst->execute(array($type, $_SESSION["debut"], $_SESSION["fin"]));
+	$lst->execute(array($type, $_SESSION["debutAnnee"], $_SESSION["fin"]));
 	while ($x = $lst->fetch())
 	{
 		array_push($result, array("x"=>$x[0], "y"=>$x[1]));
